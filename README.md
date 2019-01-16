@@ -4,6 +4,7 @@ React App for the iot project.
 
 1. <a href="#guidelines">Guidelines</a>
 2. <a href="#getting-started">Getting Started</a>
+3. <a href="#resources">Resources</a>
 
 ### Guidelines
 
@@ -35,7 +36,7 @@ own SCSS file.
 **Stateless Components**
 
 When creating components, try to use a 
-<a href="https://programmingwithmosh.com/react/react-functional-components/">stateless component</a> wherever possible.
+<a href="https://programmingwithmosh.com/react/react-functional-components/">stateless component</a> whenever possible.
 
 **Naming Components**
 
@@ -45,5 +46,13 @@ Everything related to components should be named in <a href="http://wiki.c2.com/
 
 1. `npm install`
 2. `npm start`
+
+### Resources
+
+#### Dependencies
+
+The project uses the following dependencies:
+
+**<a href="https://github.com/ReactTraining/react-router">React Router</a>**
 
 <a href="#iot_app">Back To Top</a>
