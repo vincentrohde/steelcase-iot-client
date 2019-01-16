@@ -55,4 +55,6 @@ The project uses the following dependencies:
 
 **<a href="https://github.com/ReactTraining/react-router">React Router</a>**
 
+**<a href="https://redux.js.org/">Redux</a>**
+
 <a href="#iot_app">Back To Top</a>
