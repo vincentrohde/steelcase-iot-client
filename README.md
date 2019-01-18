@@ -18,9 +18,8 @@ Please take a look at these documents before starting right away.
 ##### Components
 
 Components belong into the `src/components` directory and should be placed 
-into their own subdirectory.
-
-Take a look at this example:
+into their own subdirectory. Each component should come with its 
+own SCSS file.
 
 ```
 src
@@ -30,8 +29,15 @@ src
 |   |    |  Header.scss
 ```
 
-Each component directory should come with its 
-own SCSS file.
+**Presentational and Container Components**
+
+Components should be split into Presentational(dumb, templates) and Container
+(smart) 
+components.
+
+<a href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0">Difference Explained</a>
+
+<a href="https://gist.github.com/chantastic/fc9e3853464dffdb1e3c">Example</a>
 
 **Stateless Components**
 
