@@ -15,9 +15,9 @@ class IntroPage extends Component {
     render() {
         return (
             <div className="Page">
-                <div className="box">
-                    <h2>Willkommen bei Smartchairs</h2>
-                    <p>Introtext</p>
+                <div className="container">
+                    <h1 className="title">Willkommen bei Smartchairs</h1>
+                    <p className="description">Introtext</p>
                     <CTAButton/>
                 </div>
             </div>
