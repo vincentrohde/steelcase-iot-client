@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Example from '../../components/Example/Example';
+import CTAButton from '../../components/CTAButton/CTAButton';
 
 class HomePage extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class HomePage extends Component {
         return (
             <div className="Page">
                 <Example />
+                <CTAButton />
             </div>
         )
     }
