@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
 import './App.scss';
 
 import Example from './Example/Example';
+
 import AddButton from './AddButton/AddButton';
+import CTAButton from "./CTAButton/CTAButton";
 
 export default class App extends Component {
     render() {
