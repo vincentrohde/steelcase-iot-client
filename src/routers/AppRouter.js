@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import HomePage from '../routes/HomePage/HomePage';
+import DashboardPage from '../routes/Dashboard/Dashboard';
 import IntroPage from '../routes/IntroPage/IntroPage';
 
 class AppRouter extends Component {
@@ -15,7 +15,7 @@ class AppRouter extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/" component={DashboardPage} />
                     <Route exact path="/intro" component={IntroPage}/>
                 </Switch>
             </BrowserRouter>
