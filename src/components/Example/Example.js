@@ -9,5 +9,4 @@ const Example = () => {
         <div className="Example">Hello React.</div>
     );
 }
-
 export default Example;
