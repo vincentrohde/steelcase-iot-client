@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Navigation from '../../components/Navigation/Navigation';
 import Lane from '../../components/Lane/Lane';
+import '../Page.scss';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -12,8 +13,8 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="Page">
-                <Navigation />
-                <Lane />
+                    <Navigation />
+                    <Lane />
             </div>
         )
     }
