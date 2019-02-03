@@ -1,0 +1,32 @@
+.intro {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: #222222;
+}
+
+.container {
+  height: 85vh;
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  margin-top: 7.5vh;
+  border-radius: 32px;
+  box-shadow: 0 7px 35px;
+}
+
+.inner-container {
+  height: 100%;
+  padding-top: 10vh;
+}
+
+.description {
+  margin-top: 15vh;
+}
+
+a.CTAButton {
+  position: relative;
+  top: 15vh;
+}
