@@ -1,12 +1,11 @@
 import React from 'react';
 import './AddButton.scss';
+import { Link } from 'react-router-dom';
 
 const AddButton = () => {
     return (
-        <div className="AddButton">
-               <a href="/">+</a>
-        </div>
+        <Link className="AddButton" to="/">+</Link>
     );
-};
+}
 
 export default AddButton;

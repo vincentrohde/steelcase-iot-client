@@ -1,0 +1,11 @@
+@import "../../scss/variables";
+
+.CreateOrder {
+
+    .order-name {
+        display: block;
+        width: 100%;
+        padding: $size-s;
+        font-size: 1rem;
+    }
+}
