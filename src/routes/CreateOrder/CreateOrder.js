@@ -22,7 +22,9 @@ class CreateOrder extends Component {
                     name="name"
                     required
                     placeholder={this.title} />
-                <Grid />
+                <div className="grid-container">
+                    <Grid />
+                </div>
                 <div className="button-container">
                     <CTAButton />
                 </div>
