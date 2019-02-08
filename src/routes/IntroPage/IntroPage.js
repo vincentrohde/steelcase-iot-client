@@ -17,12 +17,10 @@ class IntroPage extends Component {
         return (
             <div className="Page intro">
                 <div className="container">
-                    <div className="inner-container">
-                        <h1 className="title">Willkommen bei Smartchairs</h1>
-                        <p className="description">Introtext</p>
-                        <div className="cta-container">
-                            <CTAButton/>
-                        </div>
+                    <h1 className="title">Willkommen bei Smartchairs</h1>
+                    <p className="description">Introtext</p>
+                    <div className="cta-container">
+                        <CTAButton/>
                     </div>
                 </div>
             </div>
