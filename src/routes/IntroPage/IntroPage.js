@@ -20,7 +20,9 @@ class IntroPage extends Component {
                     <div className="inner-container">
                         <h1 className="title">Willkommen bei Smartchairs</h1>
                         <p className="description">Introtext</p>
-                        <CTAButton/>
+                        <div className="cta-container">
+                            <CTAButton/>
+                        </div>
                     </div>
                 </div>
             </div>
