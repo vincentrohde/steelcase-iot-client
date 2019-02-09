@@ -9,7 +9,7 @@ class AppRouter extends Component {
 
     state = {
         chairs: [],
-        orders: []
+        rooms: []
     }
 
     render() {
