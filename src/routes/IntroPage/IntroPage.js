@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './IntroPage.scss';
 import CTAButton from '../../components/CTAButton/CTAButton';
 import Headline from '../../components/Headline/Headline';
 
@@ -15,12 +16,14 @@ class IntroPage extends Component {
 
     render() {
         return (
-            <div className="Page">
+            <div className="Page intro">
                 <div className="container">
                     <Headline/>
                     <h1 className="title">Willkommen bei Smartchairs</h1>
                     <p className="description">Introtext</p>
-                    <CTAButton/>
+                    <div className="cta-container">
+                        <CTAButton/>
+                    </div>
                 </div>
             </div>
         )

@@ -4,9 +4,7 @@ import './Grid.scss';
 
 const Grid = () => {
     return (
-        <div className="Grid">
-            This is the grid
-        </div>
+        <div className="Grid"></div>
     );
 }
 
