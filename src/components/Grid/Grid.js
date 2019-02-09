@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
 import Chair from '../Chair/Chair';
 
+import crossIcon from '../../assets/images/cross.svg';
+
 import './Grid.scss';
 
 class Grid extends Component {
+    constructor(props) {
+        super();
+        this.props = props;
+        this.crosses = [];
+    }
+
     render() {
+        let crosses = [];
+
+        for(let index = 0; index < 20; index++) {
+            crosses.push(
+                <div className="cross" key={index}>
+                    <img className="cross-icon" src={crossIcon} alt="Chair Icon"/>
+                </div>
+            );
+        }
+
         return (
             <div className="Grid">
-                <Chair position={{x: 1, y: 1}} />
-                <Chair position={{x: 1, y: 3}} />
-                <Chair position={{x: 4, y: 5}} />
-                <Chair position={{x: 3, y: 4}} />
-                <Chair position={{x: 5, y: 2}} />
+                <div className="chairGrid">
+                    <Chair position={{x: 3, y: 3}} />
+                </div>
+                <div className="bottomGrid">
+                    {
+                        crosses.map(cross => cross)
+                    }
+                </div>
             </div>
         );
     }
