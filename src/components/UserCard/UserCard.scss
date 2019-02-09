@@ -1,20 +1,16 @@
 .UserCard {
-  height: 15vh;
-  background: lightsalmon;
+  height: 18vh;
+  background: white;
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
 }
 
 .box-left {
-  height: 100%;
-  width: 50%;
-  float: left;
-  margin: 2em 0;
-  text-align: center;
+  width: 60%;
 }
 
 .box-right {
-  height: 100%;
-  width: 50%;
-  float: right;
-  margin: 2em 0;
+  width: 40%;
 }

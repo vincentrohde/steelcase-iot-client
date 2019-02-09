@@ -9,15 +9,17 @@ import './UserCard.scss';
 
 const UserCard = () => {
     return (
-        <div className="UserCard">
-            <div className="box-left">
-                <Rooms/>
-                <Time/>
+            <div className="UserCard">
+                <div className="box-left">
+                    <Rooms/>
+                    <Time/>
+                </div>
+                <div className="box-right">
+                    <div className="inner-box">
+                    <AvatarIcon/>
+                    </div>
+                </div>
             </div>
-            <div className="box-right">
-                <AvatarIcon/>
-            </div>
-        </div>
     );
 };
 

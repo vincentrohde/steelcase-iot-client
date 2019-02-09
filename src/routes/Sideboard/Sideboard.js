@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import UserCard from '../../components/UserCard/UserCard';
 import OrderLane from '../../components/OrderLane/OrderLane';
-import AddButton from '../../components/AddButton/AddButton';
 
 class Sideboard extends Component {
     constructor(props) {
@@ -19,10 +18,7 @@ class Sideboard extends Component {
             <div className="Page">
                 <div className="container">
                     <UserCard/>
-                    <div className="Sideboard-order">
-                        <OrderLane/>
-                        <AddButton/>
-                    </div>
+                    <OrderLane/>
                 </div>
             </div>
         )
