@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import DashboardPage from '../routes/Dashboard/Dashboard';
 import CreateOrderPage from '../routes/CreateOrder/CreateOrder';
 import IntroPage from '../routes/IntroPage/IntroPage';
-import Sideboard from "../routes/Sideboard/Sideboard";
 import RoomOverview from "../routes/RoomOverview/RoomOverview";
 
 class AppRouter extends Component {
