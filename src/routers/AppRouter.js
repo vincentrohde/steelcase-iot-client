@@ -21,7 +21,6 @@ class AppRouter extends Component {
                     <Route exact path="/" component={DashboardPage} />
                     <Route exact path="/intro" component={IntroPage} />
                     <Route exact path="/create" component={CreateOrderPage} />
-                    <Route exact path="/sideboard" component={Sideboard} />
                     <Route exact path="/roomoverview" component={RoomOverview} />
                 </Switch>
             </BrowserRouter>
