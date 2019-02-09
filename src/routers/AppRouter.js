@@ -9,14 +9,17 @@ class AppRouter extends Component {
 
     state = {
         chairs: [],
-        rooms: []
+        rooms: [],
+        isFirstTime: false
     }
 
     render() {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={DashboardPage} />
+                    <Route exact path="/" render={()=>(
+                        this.state.isFirstTime ? <Redirect to="/intro" /> : <DashboardPage />
+                    )} />
                     <Route exact path="/intro" component={IntroPage} />
                     <Route exact path="/create" component={CreateOrderPage} />
                 </Switch>
