@@ -16,7 +16,7 @@ class IntroPage extends Component {
 
     render() {
         return (
-            <div className="Page intro">
+            <div className="Page intro wavy-background">
                 <div className="container">
                     <Headline/>
                     <h1 className="title">Willkommen bei Smartchairs</h1>
