@@ -10,11 +10,11 @@ import './UserCard.scss';
 const UserCard = () => {
     return (
             <div className="UserCard">
-                <div className="box-left">
+                <div className="information-container">
                     <Rooms/>
                     <Time/>
                 </div>
-                <div className="box-right">
+                <div className="AvatarIcon-container">
                     <div className="inner-box">
                     <AvatarIcon/>
                     </div>

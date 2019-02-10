@@ -5,12 +5,10 @@
   display: flex;
   justify-content: space-between;
   padding: 1.5em;
-}
-
-.box-left {
-  width: 60%;
-}
-
-.box-right {
-  width: 40%;
+  .information-container {
+    width: 60%;
+  }
+  .AvatarIcon-container {
+    width: 40%;
+  }
 }
