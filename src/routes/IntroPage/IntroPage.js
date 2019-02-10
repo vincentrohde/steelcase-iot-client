@@ -8,6 +8,7 @@ class IntroPage extends Component {
     constructor(props) {
         super();
         this.props = props;
+        this.title = 'Willkommen bei Smartchairs';
     }
 
     componentDidMount() {
@@ -18,8 +19,7 @@ class IntroPage extends Component {
         return (
             <div className="Page intro wavy-gradient">
                 <div className="container">
-                    <Headline/>
-                    <h1 className="title">Willkommen bei Smartchairs</h1>
+                    <Headline title={this.title} />
                     <p className="description">Introtext</p>
                     <div className="cta-container">
                         <CTAButton/>
