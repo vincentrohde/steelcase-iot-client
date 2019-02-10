@@ -1,5 +1,7 @@
+@import "../../scss/variables";
+
 .Time {
-    color: #DA2B4D;
+    color: $red;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: $fw-bold;
 }

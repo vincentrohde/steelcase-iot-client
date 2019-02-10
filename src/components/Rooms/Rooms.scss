@@ -1,6 +1,8 @@
+@import "../../scss/variables";
+
 .Rooms {
-    color: #DA2B4D;
+    color: $red;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: $fw-bold;
     margin-bottom: .2em;
 }

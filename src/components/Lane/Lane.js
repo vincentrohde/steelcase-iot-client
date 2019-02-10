@@ -7,7 +7,7 @@ const Lane = (props) => {
 
     return (
         <div className="Lane">
-            <h2 className="lane-title">{title}</h2>
+            <h2 className="title">{title}</h2>
             <Rooms />
         </div>
     );

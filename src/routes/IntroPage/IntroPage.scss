@@ -1,31 +1,33 @@
+@import "../../scss/variables";
+
 .intro {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  background: #DA2B4D;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background: $red;
 }
 
 .container {
-  height: 80vh;
-  width: 75vw;
-  margin: 9vh auto;
-  background: white;
-  border-radius: 32px;
-  box-shadow: 0 7px 35px;
-  padding-top: 15vh;
+    height: 80vh;
+    width: 75vw;
+    margin: 9vh auto;
+    background: $white;
+    border-radius: 32px;
+    box-shadow: 0 7px 35px;
+    padding-top: 15vh;
 }
 
 .title {
-  color: #DA2B4D;
+    color: $red;
 }
 
 .description {
-  margin: 15vh auto;
-  width: 45vw;
+    margin: 15vh auto;
+    width: 45vw;
 }
 
 .cta-container {
-  width: 30vw;
-  margin: 0 auto;
+    width: 30vw;
+    margin: 0 auto;
 }

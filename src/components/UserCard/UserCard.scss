@@ -1,6 +1,8 @@
+@import "../../scss/variables";
+
 .UserCard {
     height: 18vh;
-    background: white;
+    background: $white;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
