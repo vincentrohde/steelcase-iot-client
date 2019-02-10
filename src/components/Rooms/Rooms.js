@@ -5,7 +5,7 @@ import './Rooms.scss';
 
 const Rooms = () => {
     return (
-        <div className="Rooms">This is a room Component</div>
+        <div className="Rooms">Raum 1.06</div>
     );
 }
 
