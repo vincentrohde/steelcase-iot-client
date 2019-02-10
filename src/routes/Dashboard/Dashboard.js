@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Navigation from '../../components/Navigation/Navigation';
 import Lane from '../../components/Lane/Lane';
+import './Dashboard.scss';
 import '../Page.scss';
 
 class Dashboard extends Component {
@@ -24,7 +25,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="Page">
-                    <Navigation />
+                    <Navigation className="Navigation" />
                     <Lane information={this.state}/>
             </div>
         )
