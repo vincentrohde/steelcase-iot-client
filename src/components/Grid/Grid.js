@@ -12,6 +12,13 @@ class Grid extends Component {
         this.crosses = [];
     }
 
+    componentDidMount() {
+        const chairGrid = document.querySelector('.chairGrid');
+        chairGrid.addEventListener('drag', (e) => {
+            console.log(e.target);
+        });
+    }
+
     render() {
         let crosses = [];
 
