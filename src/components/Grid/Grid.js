@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GridLayout from 'react-grid-layout';
 import Chair from '../Chair/Chair';
 
 import crossIcon from '../../assets/images/cross.svg';
@@ -30,11 +31,18 @@ class Grid extends Component {
             );
         }
 
+        let layout = [
+            {i: 'c', x: 1, y: 0, w: 1, h: 1}
+        ];
+
         return (
             <div className="Grid">
-                <div className="chairGrid">
-                    <Chair position={{x: 3, y: 3}} />
-                </div>
+                <GridLayout
+                    className="chairGrid"
+                    useCSSTransforms={true}
+                    layout={layout}>
+                    <div className="item" key="c"></div>
+                </GridLayout>
                 <div className="bottomGrid">
                     {
                         crosses.map(cross => cross)

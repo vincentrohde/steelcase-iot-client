@@ -18,7 +18,7 @@
         left: 0;
         z-index: 2;
         width: 100%;
-        height: 100%;
+        height: 100% !important;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
@@ -41,5 +41,12 @@
                 max-height: 100%;
             }
         }
+    }
+
+    .item {
+        width: calc(100% * (1/6)) !important;
+        height: calc(100% * (1/5)) !important;
+        background: #02A677;
+        opacity: 0.4;
     }
 }
