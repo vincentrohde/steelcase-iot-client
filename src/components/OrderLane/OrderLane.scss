@@ -17,10 +17,10 @@
     }
 
     .AddButton-container {
+        height: 20vh;
         flex: 0 0 47%;
         text-align: center;
-        display: block;
-        margin: auto;
+        display: flex;
     }
 
 }

@@ -1,10 +1,15 @@
 @import "../../scss/variables";
 
-.AddButton {
-    font-size: 2.5em;
-    padding: .6em 1em;
-    text-decoration: none;
+.AddButton-inner {
     background-image: url("../../assets/images/add-button.svg");
     background-position: center;
     background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+
+    .AddButton {
+        font-size: 2.5em;
+        padding: 1em;
+        text-decoration: none;
+    }
 }

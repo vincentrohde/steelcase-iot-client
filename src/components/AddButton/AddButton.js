@@ -7,7 +7,9 @@ const AddButton = (props) => {
     const linkTo = props.link || '/';
 
     return (
-        <Link className="AddButton" to={linkTo}>{title}</Link>
+        <div className="AddButton-inner">
+            <Link className="AddButton" to={linkTo}>{title}</Link>
+        </div>
     );
 }
 
