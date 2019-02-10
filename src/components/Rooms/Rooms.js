@@ -4,7 +4,7 @@ import './Rooms.scss';
 
 const Rooms = () => {
     return (
-        <Room />
+        <div className="Rooms">Raum 1.06</div>
     );
 }
 

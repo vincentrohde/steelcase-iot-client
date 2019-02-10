@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './IntroPage.scss';
 import CTAButton from '../../components/CTAButton/CTAButton';
+import Headline from '../../components/Headline/Headline';
 
 class IntroPage extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class IntroPage extends Component {
         return (
             <div className="Page intro">
                 <div className="container">
+                    <Headline/>
                     <h1 className="title">Willkommen bei Smartchairs</h1>
                     <p className="description">Introtext</p>
                     <div className="cta-container">

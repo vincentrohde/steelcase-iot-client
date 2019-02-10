@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+
+.UserCard {
+    height: 18vh;
+    background: $white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+
+    .information-container {
+        width: 60%;
+    }
+
+    .AvatarIcon-container {
+        width: 40%;
+    }
+}
