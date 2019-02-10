@@ -3,29 +3,26 @@
 .OrderLane-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    margin-top: 1.5em;
+    margin-top: 2em;
 
     .OrderLane-box {
-        position: relative;
         height: 20vh;
+        flex: 0 0 47%;
         width: 47%;
         background: $white;
-        margin: 0 6% 6% 0;
         border-radius: 15px;
+        margin-bottom: 2em;
     }
 
     .AddButton-container {
-        position: relative;
         height: 20vh;
+        flex: 0 0 47%;
         width: 47%;
-        margin: 0 6% 6% 0;
         border-radius: 15px;
         text-align: center;
         padding-top: 3.5em;
     }
 
-    .right {
-        margin-right: 0;
-    }
 }
