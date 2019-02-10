@@ -1,14 +1,15 @@
 import React from 'react';
 import './AvatarIcon.scss';
+import avatar from '../../assets/images/avatar.png';
 
 // this is the Avatar icon TO-DO make add Icon and menu function
 
-const AvatarIcon = (props) => {
-
-    const LinkTo = props.link || '/';
+const AvatarIcon = () => {
 
     return (
-      <link className="AvatarIcon" to={LinkTo}></link>
+        <div className="avatar-icon">
+            <img className="icon" src={avatar}/>
+        </div>
     );
 }
 

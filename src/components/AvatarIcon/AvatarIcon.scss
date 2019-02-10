@@ -1,5 +1,7 @@
-.AvatarIcon {
-  background-image: url("../../assets/images/avatar.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.avatar-icon {
+  max-width: 120px;
+  .icon {
+    width: 100%;
+  }
 }
+
