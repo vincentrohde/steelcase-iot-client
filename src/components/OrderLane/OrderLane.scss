@@ -19,10 +19,8 @@
     .AddButton-container {
         height: 20vh;
         flex: 0 0 47%;
-        width: 47%;
-        border-radius: 15px;
         text-align: center;
-        padding-top: 3.5em;
+        display: flex;
     }
 
 }
