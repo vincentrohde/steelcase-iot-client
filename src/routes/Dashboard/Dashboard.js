@@ -25,7 +25,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="Page">
-                    <Navigation />
+                    <Navigation className="Navigation" />
                     <Lane information={this.state}/>
             </div>
         )
