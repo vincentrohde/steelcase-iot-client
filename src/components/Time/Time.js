@@ -1,9 +1,5 @@
 import React from 'react';
 import './Time.scss';
-//import './Time.scss';
-
-
-// this is for the component for the time
 
 const Time = () => {
     return (
