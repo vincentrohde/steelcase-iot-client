@@ -5,6 +5,17 @@ import Lane from '../../components/Lane/Lane';
 import '../Page.scss';
 
 class Dashboard extends Component {
+
+    state = {
+        chairs: [],
+        rooms: [
+            {
+                id: 101,
+                name: 'Physik'
+            }
+        ]
+    }
+
     constructor(props) {
         super();
         this.probs = props;
@@ -14,7 +25,7 @@ class Dashboard extends Component {
         return (
             <div className="Page">
                     <Navigation />
-                    <Lane />
+                    <Lane information={this.state}/>
             </div>
         )
     }
