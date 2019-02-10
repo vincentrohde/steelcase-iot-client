@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/mixins/center";
 
 .Grid {
     position: relative;
@@ -8,11 +9,11 @@
     background: $white;
 
     .chairGrid, .bottomGrid {
-        position: absolute;
         display: grid;
     }
 
     .chairGrid {
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 2;
@@ -23,13 +24,11 @@
     }
 
     .bottomGrid {
+        @include center;
         width: 100% - (100% * (1/6));
         height: 100% - (100% * (1/6));
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
         .cross {
             grid-column: auto;
@@ -37,10 +36,7 @@
             position: relative;
 
             .cross-icon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                @include center;
                 width: 15%;
                 max-height: 100%;
             }
