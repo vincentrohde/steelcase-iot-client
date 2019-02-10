@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080.1 602.7" style="enable-background:new 0 0 1080.1 602.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Path_1_1_);}
+</style>
+<title>wave</title>
+<linearGradient id="Path_1_1_" gradientUnits="userSpaceOnUse" x1="386.1426" y1="-113.3501" x2="386.1426" y2="-112.6842" gradientTransform="matrix(1080.0901 0 0 602.6919 -416528.7812 68516.5781)">
+	<stop  offset="0" style="stop-color:#02A677"/>
+	<stop  offset="1" style="stop-color:#005A5B"/>
+</linearGradient>
+<path id="Path_1" class="st0" d="M0,249.9c0,0,231.7-118.2,480.4,14.5s599.7-14.5,599.7-14.5v352.8H0V249.9z"/>
+</svg>
