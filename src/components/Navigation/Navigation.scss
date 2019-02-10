@@ -1,4 +1,8 @@
 .Navigation {
   display: flex;
   justify-content: space-between;
+  height: 11vh;
+  .AvatarIcon {
+    width: 8%;
+  }
 }

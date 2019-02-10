@@ -14,10 +14,8 @@ const UserCard = () => {
                     <Rooms/>
                     <Time/>
                 </div>
-                <div className="AvatarIcon-container">
-                    <div className="inner-box">
+                <div className="AvatarIcon">
                     <AvatarIcon/>
-                    </div>
                 </div>
             </div>
     );
