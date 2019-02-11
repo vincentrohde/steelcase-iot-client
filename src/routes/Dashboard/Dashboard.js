@@ -24,8 +24,9 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div className="Page wavy-gradient">
+            <div className="DashboardPage wavy-gradient">
                     <Navigation />
+                    <Lane information={this.state}/>
                     <Lane information={this.state}/>
             </div>
         )
