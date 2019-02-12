@@ -13,6 +13,14 @@ class Dashboard extends Component {
             {
                 id: 101,
                 name: 'Physik'
+            },
+            {
+                id: 102,
+                name: 'Mathe'
+            },
+            {
+                id: 103,
+                name: 'Deutsch'
             }
         ]
     }
@@ -32,8 +40,6 @@ class Dashboard extends Component {
                 </div>
                 <div className="Lane-container">
                     <h2 className="title">Räume</h2>
-                    <Lane information={this.state}/>
-                    <Lane information={this.state}/>
                     <Lane information={this.state}/>
                 </div>
             </div>
