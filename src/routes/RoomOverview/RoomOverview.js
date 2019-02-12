@@ -8,6 +8,9 @@ class RoomOverview extends Component {
     constructor(props) {
         super();
         this.props = props;
+        this.match = props.match;
+        this.params = this.match.params;
+        this.id = this.params.id;
     }
 
     componentDidMount() {
@@ -19,7 +22,7 @@ class RoomOverview extends Component {
             <div className="RoomOverviewPage">
                 <div className="RoomOverview-container">
                     <div className="Simulation"></div>
-                    <Sideboard/>
+                    <Sideboard />
                 </div>
             </div>
         )
