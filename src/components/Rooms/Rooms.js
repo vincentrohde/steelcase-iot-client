@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect, actions } from "../../stores/Rooms";
-import Room from '../../components/Room/Room';
+import Room from './Room/Room';
 
 import './Rooms.scss';
 
