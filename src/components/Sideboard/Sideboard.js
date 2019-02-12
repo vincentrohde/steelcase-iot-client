@@ -1,8 +1,8 @@
 import React from 'react';
-import UserCard from "../UserCard/UserCard";
+import UserCard from "./UserCard/UserCard";
 import OrderLane from "../OrderLane/OrderLane";
-import './Sideboard.scss';
 
+import './Sideboard.scss';
 
 const Sideboard = () => {
     return (

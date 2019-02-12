@@ -23,7 +23,8 @@ class AppRouter extends Component {
                     )} />
                     <Route exact path="/intro" component={IntroPage} />
                     <Route exact path="/create" component={CreateOrderPage} />
-                    <Route exact path="/roomoverview" component={RoomOverview} />
+                    <Route exact path="/room/:id" component={RoomOverview} />
+                    <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
         );
