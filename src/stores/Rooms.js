@@ -17,7 +17,14 @@ const store = {
             }
         ]
     },
-    actionsCreators: {}
+    actionsCreators: {
+        add: ({rooms}, actions, newRoom) => {
+            const newValue = [...rooms, newRoom];
+            return {
+                rooms: newValue
+            }
+        }
+    }
 };
 
 const {

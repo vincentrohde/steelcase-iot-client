@@ -10,6 +10,14 @@ class Rooms extends Component {
         this.props = props;
     }
 
+    addRoom() {
+        const newRoom = {
+            id: 420,
+            name: 'Biologie'
+        };
+        actions.add(newRoom);
+    }
+
     render() {
         const { rooms } = this.props.context;
         return (
