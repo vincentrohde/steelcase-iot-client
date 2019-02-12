@@ -1,14 +1,17 @@
 import React from 'react';
+import { Provider } from "../../stores/Orders";
 import UserCard from "./UserCard/UserCard";
-import OrderLane from "../OrderLane/OrderLane";
+import Orders from "./Orders/Orders";
 
 import './Sideboard.scss';
 
 const Sideboard = () => {
     return (
         <div className="Sideboard">
-          <UserCard/>
-          <OrderLane/>
+            <UserCard/>
+            <Provider>
+                <Orders />
+            </Provider>
         </div>
     );
 };

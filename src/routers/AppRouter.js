@@ -9,7 +9,6 @@ import RoomOverview from "../routes/RoomOverview/RoomOverview";
 class AppRouter extends Component {
 
     state = {
-        chairs: [],
         rooms: [],
         isFirstTime: false
     }

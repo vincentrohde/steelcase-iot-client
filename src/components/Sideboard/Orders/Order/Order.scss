@@ -1,0 +1,16 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/mixins/center";
+
+.Order {
+    position: relative;
+    height: 20vh;
+    flex: 0 0 47%;
+    width: 47%;
+    background: $white;
+    border-radius: 15px;
+    margin-bottom: 2em;
+
+    .title {
+        @include center;
+    }
+}
