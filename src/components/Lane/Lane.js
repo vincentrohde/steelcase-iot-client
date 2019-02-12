@@ -5,7 +5,6 @@ import './Lane.scss';
 
 const Lane = (props) => {
     const title = props.title || '';
-    const linkTo = props.link || '/roomoverview';
 
     const { information } = props;
 
