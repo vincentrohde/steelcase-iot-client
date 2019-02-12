@@ -17,17 +17,25 @@ class Dashboard extends Component {
         ]
     }
 
-    constructor(props) {
+    constructor(props)
+    {
         super();
         this.probs = props;
     }
 
-    render() {
+    render()
+    {
         return (
             <div className="DashboardPage wavy-gradient">
+                <div className="Navigation-container">
                     <Navigation />
+                </div>
+                <div className="Lane-container">
+                    <h2 className="title">Räume</h2>
                     <Lane information={this.state}/>
                     <Lane information={this.state}/>
+                    <Lane information={this.state}/>
+                </div>
             </div>
         )
     }

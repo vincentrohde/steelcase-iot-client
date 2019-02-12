@@ -4,7 +4,17 @@
     height: 100vh;
     width: 100vw;
     padding: 2em;
+    .Navigation-container  {
+        height: 30vh;
+    }
+    .Lane-container {
+        .title {
+            font-family: $ff-general;
+            font-size: 2.4em;
+            font-weight: 400;
+            color: $white;
+            margin: 1em 0 .5em 1em;
+        }
+    }
 }
-
-
 
