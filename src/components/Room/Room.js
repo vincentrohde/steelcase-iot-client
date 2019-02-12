@@ -1,14 +1,12 @@
 import React from 'react';
 import './Room.scss';
 
-// this is for the component for the individual rooms
-
 const Room = (props) => {
 
-    const roomNr = props.roomNr || 1.06;
+    const { id } = props.information || '000';
 
     return (
-        <div className="Room">{roomNr}</div>
+        <div className="Room">{id}</div>
     );
 }
 
