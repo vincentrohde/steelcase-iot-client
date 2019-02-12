@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect, actions } from "../../stores/Rooms";
 import Room from '../../components/Room/Room';
+
 import './Rooms.scss';
 
-const Rooms = (props) => {
-    const { rooms } = props;
+class Rooms extends Component {
+    constructor(props) {
+        super();
+        this.props = props;
+    }
 
-    return (
-        <div className="Rooms">
-            {
-                rooms.map((room, index) => <Room information={room} key={index} />)
-            }
-        </div>
-    );
+    render() {
+        const { rooms } = this.props.context;
+        return (
+            <div className="Rooms">
+                {
+                    rooms.map((room, index) => <Room information={room} key={index} />)
+                }
+            </div>
+        );
+    }
 }
 
-export default Rooms;
+export default connect(state => ({ context: state }))(Rooms);
