@@ -1,39 +1,17 @@
-import createStore from "react-waterfall";
-
-const store = {
-    initialState: {
-        rooms: [
-            {
-                id: 101,
-                name: 'Physik'
-            },
-            {
-                id: 201,
-                name: 'Deutsch'
-            },
-            {
-                id: 301,
-                name: 'Physik'
-            }
-        ]
+const rooms = [
+    {
+        id: 101,
+        name: 'Physik',
+        order: 2,
     },
-    actionsCreators: {
-        add: ({rooms}, actions, newRoom) => {
-            const newValue = [...rooms, newRoom];
-            return {
-                rooms: newValue
-            }
-        }
+    {
+        id: 201,
+        name: 'Deutsch'
+    },
+    {
+        id: 301,
+        name: 'Sport'
     }
-};
+];
 
-const {
-    Provider,
-    Consumer,
-    actions,
-    getState,
-    connect,
-    subscribe
-} = createStore(store);
-
-export { Provider, Consumer, actions, getState, connect, subscribe };
+export default rooms;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect, actions } from "../../../stores/Orders";
+import { connect, actions } from "../../../stores/Store";
 import Order from "./Order/Order";
 import AddButton from "../../AddButton/AddButton";
 
@@ -12,7 +12,7 @@ class Orders extends Component {
     }
 
     render() {
-        const { orders } = this.props.context;
+        const { orders } = this.props;
 
         return (
             <div className="OrderLane-container">
@@ -27,4 +27,4 @@ class Orders extends Component {
     }
 };
 
-export default connect(state => ({ context: state }))(Orders);
+export default connect(({ orders }) => ({ orders }))(Orders);

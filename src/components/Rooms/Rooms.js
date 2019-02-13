@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect, actions } from "../../stores/Rooms";
+import { connect, actions } from "../../stores/Store";
 import Room from './Room/Room';
 
 import './Rooms.scss';
@@ -15,11 +15,11 @@ class Rooms extends Component {
             id: 420,
             name: 'Biologie'
         };
-        actions.add(newRoom);
+        actions.addRoom(newRoom);
     }
 
     render() {
-        const { rooms } = this.props.context;
+        const { rooms } = this.props;
         return (
             <div className="Rooms">
                 <button onClick={this.addRoom}>Add Room</button>
@@ -31,4 +31,5 @@ class Rooms extends Component {
     }
 }
 
-export default connect(state => ({ context: state }))(Rooms);
+
+export default connect(({ rooms }) => ({ rooms }))(Rooms);

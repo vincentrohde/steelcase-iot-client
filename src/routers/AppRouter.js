@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { Provider } from "../stores/Rooms";
+import { Provider } from "../stores/Store";
 
 import DashboardPage from '../routes/Dashboard/Dashboard';
 import CreateOrderPage from '../routes/CreateOrder/CreateOrder';
@@ -10,7 +10,6 @@ import RoomOverview from "../routes/RoomOverview/RoomOverview";
 class AppRouter extends Component {
 
     state = {
-        rooms: [],
         isFirstTime: false
     }
 

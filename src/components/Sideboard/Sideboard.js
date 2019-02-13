@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from "../../stores/Orders";
 import UserCard from "./UserCard/UserCard";
 import Orders from "./Orders/Orders";
 
@@ -9,9 +8,7 @@ const Sideboard = () => {
     return (
         <div className="Sideboard">
             <UserCard/>
-            <Provider>
-                <Orders />
-            </Provider>
+            <Orders />
         </div>
     );
 };
