@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from "../../stores/Rooms";
 
 import Rooms from '../../components/Rooms/Rooms';
 
@@ -10,9 +9,7 @@ const Lane = (props) => {
 
     return (
         <div className="Lane">
-            <Provider>
-                <Rooms rooms={information.rooms} />
-            </Provider>
+            <Rooms rooms={information.rooms} />
         </div>
     )
 };
