@@ -21,6 +21,10 @@ class AppRouter extends Component {
         isFirstTime: false
     }
 
+    componentWillMount() {
+        this.getStateFromServer();
+    }
+
     initializeListener() {
         const subscriber = this.addStoreListener();
     }
@@ -62,10 +66,6 @@ class AppRouter extends Component {
                     console.log(error);
                 });
         });
-    }
-
-    componentWillMount() {
-        this.getStateFromServer();
     }
 
     render() {
