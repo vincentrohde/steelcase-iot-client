@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get('/state', function(req, res) {
-    res.send('Give state!');
+const StateManager = require('./src/StateManager');
+
+app.get('/', function(req, res) {
+    StateManager.getState(res);
 });
 
 const server = app.listen(3000, function() {
