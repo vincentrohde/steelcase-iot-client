@@ -1,10 +1,12 @@
 import createStore from "react-waterfall";
 
+import chairs from './Chairs';
 import orders from './Orders';
 import rooms from './Rooms';
 
 const store = {
     initialState: {
+        chairs,
         orders,
         rooms
     },

@@ -2,15 +2,17 @@ const rooms = [
     {
         id: 101,
         name: 'Physik',
-        order: 2,
+        orders: [1, 2, 3]
     },
     {
         id: 201,
-        name: 'Deutsch'
+        name: 'Deutsch',
+        orders: []
     },
     {
         id: 301,
-        name: 'Sport'
+        name: 'Sport',
+        orders: []
     }
 ];
 
