@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import axios from 'axios';
 import { Provider } from "../stores/Store";
 
 import DashboardPage from '../routes/Dashboard/Dashboard';
