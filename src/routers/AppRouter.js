@@ -26,6 +26,23 @@ class AppRouter extends Component {
             .then(res => {
                 const { data } = res;
                 actions.addState(data);
+            })
+            .catch(error => {
+                const data = {
+                    orders: [],
+                    rooms: [
+                        {
+                            id: 504,
+                            name: 'Sport',
+                            orders: [1, 2, 3]
+                        }
+                    ]
+                };
+
+                actions.addState(data);
+
+                console.log('Fallback State added.');
+                console.log('Error occurred in Server request: ', error);
             });
     }
 

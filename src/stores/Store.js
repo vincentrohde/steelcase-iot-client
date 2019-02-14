@@ -3,13 +3,7 @@ import createStore from "react-waterfall";
 const store = {
     initialState: {
         orders: [],
-        rooms: [
-            {
-                id: 501,
-                name: 'Sport',
-                orders: [1, 2, 3]
-            }
-        ]
+        rooms: []
     },
     actionsCreators: {
         addState: (prevState, actions, newState) => {
