@@ -9,8 +9,16 @@ const StateManager = (function(){
         });
     }
 
+    const setState = (input, response) => {
+        fs.writeFile('state.json', JSON.stringify(input), function (err) {
+            if (err) throw err;
+            response.send('State saved!');
+        });
+    }
+
     return {
-        getState
+        getState,
+        setState
     };
 })();
 

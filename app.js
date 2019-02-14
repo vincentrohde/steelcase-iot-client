@@ -13,8 +13,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function (req, res) {
-    console.log(req.body);
-    res.send('State saved!');
+    StateManager.setState(req.body, res);
 });
 
 app.listen(4000, function() {});
