@@ -10,14 +10,8 @@ const store = {
             const newOrders = newState.orders;
             const newRooms = newState.rooms;
 
-            // let updatedState = {...prevState};
-            // const properties = Object.keys(newState);
-            // properties.forEach(property => {
-            //     property = newState[property];
-            //     updatedState = {...updatedState, newState[property]};
-            // });
-
             // TODO: Dynamically generate state
+            // {...prevState, newState}
             return {
                 ...prevState,
                 orders: newOrders,
