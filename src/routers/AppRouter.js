@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios';
-import { connect, actions } from "../stores/Store";
+import { connect, actions, subscribe } from "../stores/Store";
 
 import DashboardPage from '../routes/Dashboard/Dashboard';
 import CreateOrderPage from '../routes/CreateOrder/CreateOrder';
@@ -13,16 +13,21 @@ class AppRouter extends Component {
     constructor(props) {
         super();
         this.props = props;
+        this.server = 'http://localhost:4000';
+        this.initializeListener();
     }
 
     state = {
-        isFirstTime: false,
-        server: 'http://localhost:4000'
+        isFirstTime: false
+    }
+
+    initializeListener() {
+        const subscriber = this.addStoreListener();
     }
 
     getStateFromServer() {
-        const { server } = this.state;
-        axios.get(server)
+
+        axios.get(this.server)
             .then(res => {
                 const { data } = res;
                 actions.addState(data);
@@ -46,12 +51,24 @@ class AppRouter extends Component {
             });
     }
 
+    addStoreListener() {
+        subscribe((action, state) => {
+            axios.post(this.server, state)
+                .then(function (res) {
+                    const { data } = res;
+                    console.log(data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        });
+    }
+
     componentWillMount() {
         this.getStateFromServer();
     }
 
     render() {
-
         return (
             <BrowserRouter>
                 <Switch>
