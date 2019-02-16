@@ -1,4 +1,8 @@
 .Navigation {
   display: flex;
   justify-content: space-between;
+  .AvatarIcon-container_Navigation {
+    width: 10%;
+    max-width: 60px;
+  }
 }
