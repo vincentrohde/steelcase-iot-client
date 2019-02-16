@@ -13,9 +13,9 @@ const UserCard = () => {
                     <Time/>
                 </div>
                 <div className="AvatarIcon-container">
-                    <div className="inner-box">
-                        <AvatarIcon/>
-                    </div>
+                        <div className="AvatarIcon-container_UserCard">
+                            <AvatarIcon/>
+                        </div>
                 </div>
             </div>
     );

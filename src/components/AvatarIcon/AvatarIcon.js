@@ -6,9 +6,7 @@ const avatar = require('../../assets/images/avatar.png');
 
 const AvatarIcon = () => {
     return (
-      <div className="AvatarIcon">
           <img className="icon" src={avatar}/>
-      </div>
     );
 }
 
