@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Provider } from "../../stores/ChairsStore";
 
+import Simulation from '../../components/Simulation/Simulation';
 import Sideboard from '../../components/Sideboard/Sideboard';
 
 import './RoomOverview.scss';
@@ -14,14 +16,16 @@ class RoomOverview extends Component {
     }
 
     componentDidMount() {
-        document.title = 'RoomOverview';
+        document.title = `Raum ${this.id}`;
     }
 
     render() {
         return (
             <div className="RoomOverviewPage">
                 <div className="RoomOverview-container">
-                    <div className="Simulation"></div>
+                    <Provider>
+                        <Simulation />
+                    </Provider>
                     <Sideboard />
                 </div>
             </div>
