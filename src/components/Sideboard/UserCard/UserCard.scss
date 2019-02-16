@@ -14,5 +14,10 @@
 
     .AvatarIcon-container {
         width: 40%;
+        .AvatarIcon-container_UserCard {
+            display: block;
+            margin: auto;
+            width: 55%;
+        }
     }
 }

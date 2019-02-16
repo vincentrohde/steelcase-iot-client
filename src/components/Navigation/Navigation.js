@@ -7,7 +7,9 @@ const Navigation = () => {
     return (
         <div className="Navigation">
             <Headline/>
-            <AvatarIcon/>
+            <div className="AvatarIcon-container_Navigation">
+                <AvatarIcon/>
+            </div>
         </div>
     );
 }
