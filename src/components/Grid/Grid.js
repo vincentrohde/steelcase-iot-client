@@ -26,7 +26,7 @@ class Grid extends Component {
         return (
             <div className="Grid">
                 <div className="chairGrid">
-                    <Chair position={{x: 3, y: 3}} />
+                    <Chair isGrid={true} position={{x: 3, y: 3}} />
                 </div>
                 <div className="bottomGrid">
                     {

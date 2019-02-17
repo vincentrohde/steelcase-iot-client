@@ -8,15 +8,19 @@ class Chair extends Component {
         super();
         this.props = props;
         this.position = this.props.position;
-        this.gridPosition = {
-            gridColumn: `${this.position.x} / ${this.position.x + 1}`,
-            gridRow: `${this.position.y} / ${this.position.y + 1}`
+        this.isGrid = this.props.isGrid;
+        if(this.isGrid) {
+            this.gridPosition = {
+                gridColumn: `${this.position.x} / ${this.position.x + 1}`,
+                gridRow: `${this.position.y} / ${this.position.y + 1}`
+            };
         }
     }
 
     render() {
         return (
-            <div className="Chair" style={this.gridPosition}>
+            <div className="Chair" style={
+                this.props.template ? this.props.template : this.gridPosition} >
                 <img className="chair-icon" src={chairIcon} alt="Chair Icon"/>
             </div>
         );

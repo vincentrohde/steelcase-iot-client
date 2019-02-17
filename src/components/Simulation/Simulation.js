@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect, actions } from "../../stores/ChairsStore";
 
+import Chair from "../Chair/Chair"
+
 import './Simulation.scss';
 
 class Simulation extends Component{
@@ -41,11 +43,16 @@ class Simulation extends Component{
             <div className="Simulation">
                 {
                     chairs.map((chair, index) => {
-                        return (<div key={index} className="chair">
-                            { `ID: ${chair.id}, X: ${chair.x}, Y: ${chair.y}, B: ${chair.bearing}` }
-                        </div>);
+                        const template = {
+                            transform: `translate(${chair.x}px, ${chair.y}px) rotate(${chair.bearing}deg)`
+                        }
+
+                        return (
+                            <Chair key={index} isGrid={false} template={template} />
+                        )
                     })
                 }
+
             </div>
         );
     }
