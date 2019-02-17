@@ -28,6 +28,7 @@ class Sideboard extends Component{
 
     openTargetSocket(target) {
         const connection = new WebSocket('ws://10.51.7.233:9898');
+        console.log(JSON.parse(target));
 
         connection.onopen = function() {
             connection.onmessage = function (response) {
