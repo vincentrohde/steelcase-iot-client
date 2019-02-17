@@ -22,7 +22,7 @@ class Rooms extends Component {
         const { rooms } = this.props;
         return (
             <div className="Rooms">
-                <button onClick={this.addRoom}>Add Room</button>
+                <button className="AddRoom" onClick={this.addRoom}>Add Room</button>
                 {
                     rooms.map((room, index) => <Room information={room} key={index} />)
                 }

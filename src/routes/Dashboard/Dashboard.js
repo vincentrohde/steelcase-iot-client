@@ -13,14 +13,12 @@ class Dashboard extends Component {
     }
 
     render() {
-        var roomdescription= "Räume";
         return (
             <div className="DashboardPage wavy-gradient">
                 <div className="Navigation-container">
                     <Navigation/>
                 </div>
                 <div className="Lane-container">
-                    <h2 className="title">{roomdescription}</h2>
                     <Lane />
                 </div>
             </div>
