@@ -1,4 +1,16 @@
+@import "../../scss/mixins/center";
+
 .Simulation {
-    flex: 1;
-    padding: 0.5em;
+    position: relative;
+    width: 55vw;
+    height: 55vw;
+    margin: 5vw;
+
+    .Chair {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+    }
 }

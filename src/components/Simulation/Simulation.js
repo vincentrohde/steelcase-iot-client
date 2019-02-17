@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect, actions } from "../../stores/ChairsStore";
 
+import Chair from "../Chair/Chair"
+
 import './Simulation.scss';
 
 class Simulation extends Component{
@@ -10,11 +12,19 @@ class Simulation extends Component{
         this.chairs = [];
     }
 
-    componentWillMount() {
-        this.openChairSocket();
+    componentDidMount() {
+        const simulation = document.querySelector('.Simulation');
+        const simulationStyles = window.getComputedStyle(simulation, null);
+        const simulationWidthPX = simulationStyles.getPropertyValue('width');
+
+        const simulationWidth = Number(simulationWidthPX.substring(0, simulationWidthPX.length - 2));
+        const chairWidth = 200;
+        const conversionRate = this.calculateConversionFactor(simulationWidth - chairWidth);
+
+        this.openChairSocket(conversionRate);
     }
 
-    openChairSocket() {
+    openChairSocket(conversionRate) {
         const that = this;
 
         // for mock use mock/chair-server.js from the server repo
@@ -23,6 +33,9 @@ class Simulation extends Component{
 
         socket.onmessage = function (event) {
             const chair = JSON.parse(event.data);
+            chair.x = Math.round(chair.x * conversionRate);
+            chair.y = Math.round(chair.y * conversionRate);
+
             const updatedChairs = that.updateChairInChairs(that.chairs, chair);
             that.chairs = updatedChairs;
 
@@ -35,15 +48,23 @@ class Simulation extends Component{
         return [...filteredChairs, item];
     }
 
+    calculateConversionFactor(width) {
+        return (width / 1008);
+    }
+
     render() {
         const { chairs } = this.props;
         return (
             <div className="Simulation">
                 {
                     chairs.map((chair, index) => {
-                        return (<div key={index} className="chair">
-                            { `ID: ${chair.id}, X: ${chair.x}, Y: ${chair.y}, B: ${chair.bearing}` }
-                        </div>);
+                        const template = {
+                            transform: `translate(${chair.x}px, ${chair.y}px) rotate(${chair.bearing}deg)`
+                        }
+
+                        return (
+                            <Chair key={index} isGrid={false} template={template} />
+                        )
                     })
                 }
             </div>
