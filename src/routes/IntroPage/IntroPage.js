@@ -16,7 +16,9 @@ class IntroPage extends Component {
     }
 
     render() {
-        var introtext = "Das ist der Introtext";
+        var introtext = "Arranging chairs takes a lot of time and is exhausting. We at design Akademie Berlin wrote a system that does exactly this. It arranges chairs for you.\n" +
+            "This is the app where you can tell the chairs where they shot be positioned.\n" +
+            "Click on the button to enter the Dashboard and discover the app for magic seat trims.";
         return (
             <div className="Page intro wavy-gradient">
                 <div className="container">
