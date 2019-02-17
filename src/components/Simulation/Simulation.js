@@ -16,6 +16,9 @@ class Simulation extends Component{
 
     openChairSocket() {
         const that = this;
+
+        // for mock use mock/chair-server.js from the server repo
+        // https://github.com/vincentrohde/iot_app_server
         const socket = new WebSocket('ws://localhost:5000');
 
         socket.onmessage = function (event) {
