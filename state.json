@@ -1,1 +1,1 @@
-{"orders":[{"id":1,"name":"Block","chairCount":4,"positions":[]},{"id":2,"name":"Kreis","chairCount":4,"positions":[]}],"rooms":[{"id":101,"name":"Physik","orders":[1,2,3]},{"id":201,"name":"Deutsch","orders":[1,2,3]}]}
+{"orders":[{"id":1,"name":"Block","chairCount":4,"positions":[{"id":1,"target":{"x":4,"y":1,"bearing":90}},{"id":2,"target":{"x":4,"y":2,"bearing":90}},{"id":3,"target":{"x":4,"y":3,"bearing":90}},{"id":4,"target":{"x":4,"y":4,"bearing":90}}]}],"rooms":[{"id":101,"name":"Physik","orders":[1,2,3]},{"id":201,"name":"Deutsch","orders":[1,2,3]}]}
