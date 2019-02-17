@@ -2,6 +2,10 @@ const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 5000 });
 
+const randomValue = (min, max) => {
+    return Math.round(Math.random() * (max - min) + min);
+}
+
 const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
     let chair = {
         id: 0,
@@ -10,10 +14,10 @@ const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
         bearing: 0
     }
 
-    chair.id = Math.round(Math.random() * (idRange - chair.id) + chair.id);
-    chair.x = Math.round(Math.random() * (xRange - chair.x) + chair.x);
-    chair.y = Math.round(Math.random() * (yRange - chair.y) + chair.y);
-    chair.bearing = Math.round(Math.random() * (bearingRange - chair.bearing) + chair.bearing);
+    chair.id = randomValue(chair.id, idRange);
+    chair.x = randomValue(chair.x, xRange);
+    chair.y = randomValue(chair.y, yRange);
+    chair.bearing = randomValue(chair.bearing, bearingRange);
 
     return chair;
 }
