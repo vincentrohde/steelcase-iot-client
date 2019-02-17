@@ -9,7 +9,7 @@ const Lane = (props) => {
 
     return (
         <div className="Lane">
-            <Rooms rooms={information.rooms} />
+            <Rooms />
         </div>
     )
 };

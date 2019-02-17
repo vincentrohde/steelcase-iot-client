@@ -6,25 +6,6 @@ import './Dashboard.scss';
 import '../Page.scss';
 
 class Dashboard extends Component {
-
-    state = {
-        chairs: [],
-        rooms: [
-            {
-                id: 101,
-                name: 'Physik'
-            },
-            {
-                id: 102,
-                name: 'Mathe'
-            },
-            {
-                id: 103,
-                name: 'Deutsch'
-            }
-        ]
-    }
-
     constructor(props)
     {
         super();
@@ -40,7 +21,7 @@ class Dashboard extends Component {
                 </div>
                 <div className="Lane-container">
                     <h2 className="title">{roomdescription}</h2>
-                    <Lane information={this.state}/>
+                    <Lane />
                 </div>
             </div>
         )
