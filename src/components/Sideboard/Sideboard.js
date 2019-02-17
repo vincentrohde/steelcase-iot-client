@@ -18,13 +18,17 @@ class Sideboard extends Component{
 
     componentDidMount() {
         const sideboard = document.querySelector('.Sideboard');
-        sideboard.addEventListener('click', this.sendOrders);
+        const openTargetSocket = this.openTargetSocket.bind(this);
+
+        sideboard.addEventListener('click', function(event) {
+            const target = event.target;
+            if(target.classList.contains('Order')) {
+                openTargetSocket();
+            }
+        });
 
     }
-    sendOrders(event) {
 
-        console.log(event.target);
-    }
 
 
     openChairSocket() {
@@ -40,7 +44,6 @@ class Sideboard extends Component{
 
     openTargetSocket() {
         const connection = new WebSocket('ws://10.51.7.233:9898');
-
         const message = {
             "reciver" : "controller",
             "targets" : [
