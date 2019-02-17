@@ -6,41 +6,22 @@ import './Dashboard.scss';
 import '../Page.scss';
 
 class Dashboard extends Component {
-
-    state = {
-        chairs: [],
-        rooms: [
-            {
-                id: 101,
-                name: 'Physik'
-            },
-            {
-                id: 102,
-                name: 'Mathe'
-            },
-            {
-                id: 103,
-                name: 'Deutsch'
-            }
-        ]
-    }
-
     constructor(props)
     {
         super();
         this.probs = props;
     }
 
-    render()
-    {
+    render() {
+        var roomdescription= "Räume";
         return (
             <div className="DashboardPage wavy-gradient">
                 <div className="Navigation-container">
-                    <Navigation />
+                    <Navigation/>
                 </div>
                 <div className="Lane-container">
-                    <h2 className="title">Räume</h2>
-                    <Lane information={this.state}/>
+                    <h2 className="title">{roomdescription}</h2>
+                    <Lane />
                 </div>
             </div>
         )
