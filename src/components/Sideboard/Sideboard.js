@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import React, { Component } from 'react';
 import UserCard from "./UserCard/UserCard";
 import Orders from "./Orders/Orders";
@@ -16,8 +17,16 @@ class Sideboard extends Component{
     }
 
     componentDidMount() {
-        this.openTargetSocket();
+        document.body.addEventListener('click', this.sendOrders);
+
     }
+    sendOrders() {
+        const event = document.getElementsByClassName('orders');
+        if (document.getElementsByClassName('orders').matches(event)) {
+            this.openTargetSocket();
+        }
+    }
+
 
     openChairSocket() {
         const that = this;
@@ -98,6 +107,6 @@ class Sideboard extends Component{
             </div>
         );
     }
-};
+}
 
 export default Sideboard;
