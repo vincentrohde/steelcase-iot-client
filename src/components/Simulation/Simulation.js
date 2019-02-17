@@ -35,7 +35,15 @@ class Simulation extends Component{
     render() {
         const { chairs } = this.props;
         return (
-            <div className="Simulation"></div>
+            <div className="Simulation">
+                {
+                    chairs.map((chair, index) => {
+                        return (<div key={index} className="chair">
+                            { `ID: ${chair.id}, X: ${chair.x}, Y: ${chair.y}, B: ${chair.bearing}` }
+                        </div>);
+                    })
+                }
+            </div>
         );
     }
 };
