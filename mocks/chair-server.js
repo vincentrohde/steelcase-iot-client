@@ -10,7 +10,7 @@ const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
     let chair = {
         id: 0,
         x: 0,
-        y: 100,
+        y: 0,
         bearing: 0
     }
 
@@ -24,8 +24,10 @@ const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
 
 const mockResponse = (socket) => {
     const interval = setInterval(() => {
-        socket.send(JSON.stringify(chairGenerator(3, 500, 500, 360)));
-    }, 500);
+        const chair = chairGenerator(3, 1008, 1008, 360);
+        console.log(chair);
+        socket.send(JSON.stringify(chair));
+    }, 200);
 
     socket.on('close', function() {
         clearInterval(interval);
