@@ -31,15 +31,15 @@ class Dashboard extends Component {
         this.probs = props;
     }
 
-    render()
-    {
+    render() {
+        var roomdescription= "Räume";
         return (
             <div className="DashboardPage wavy-gradient">
                 <div className="Navigation-container">
-                    <Navigation />
+                    <Navigation/>
                 </div>
                 <div className="Lane-container">
-                    <h2 className="title">Räume</h2>
+                    <h2 className="title">{roomdescription}</h2>
                     <Lane information={this.state}/>
                 </div>
             </div>
