@@ -16,11 +16,12 @@ class IntroPage extends Component {
     }
 
     render() {
+        var introtext = "Das ist der Introtext";
         return (
             <div className="Page intro wavy-gradient">
                 <div className="container">
                     <Headline title={this.title} />
-                    <p className="description">Introtext</p>
+                    <p className="description">{introtext}</p>
                     <div className="cta-container">
                         <CTAButton/>
                     </div>

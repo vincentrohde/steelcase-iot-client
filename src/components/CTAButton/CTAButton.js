@@ -3,7 +3,7 @@ import './CTAButton.scss';
 import { Link } from 'react-router-dom';
 
 const CTAButton = (props) => {
-    const title = props.title || 'Link zum Dashboard';
+    const title = props.title || 'Los';
     const linkTo = props.link || '/';
 
     return (
