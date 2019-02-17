@@ -17,14 +17,13 @@ class Sideboard extends Component{
     }
 
     componentDidMount() {
-        document.body.addEventListener('click', this.sendOrders);
+        const sideboard = document.querySelector('.Sideboard');
+        sideboard.addEventListener('click', this.sendOrders);
 
     }
-    sendOrders() {
-        const event = document.getElementsByClassName('orders');
-        if (document.getElementsByClassName('orders').matches(event)) {
-            this.openTargetSocket();
-        }
+    sendOrders(event) {
+
+        console.log(event.target);
     }
 
 
