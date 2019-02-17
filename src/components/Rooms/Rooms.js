@@ -31,5 +31,4 @@ class Rooms extends Component {
     }
 }
 
-
 export default connect(({ rooms }) => ({ rooms }))(Rooms);

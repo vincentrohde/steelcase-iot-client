@@ -38,7 +38,14 @@ class AppRouter extends Component {
             })
             .catch(error => {
                 const data = {
-                    orders: [],
+                    orders: [
+                        {
+                            id: 1,
+                            name: "Block",
+                            chairCount: 4,
+                            positions: []
+                        }
+                    ],
                     rooms: [
                         {
                             id: 504,

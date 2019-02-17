@@ -8,26 +8,12 @@ class Sideboard extends Component{
     constructor(props) {
         super();
         this.props = props;
-        this.chairs = [];
     }
 
-    componentWillMount() {
-        this.openChairSocket();
-    }
+    componentWillMount() {}
 
     componentDidMount() {
         this.openTargetSocket();
-    }
-
-    openChairSocket() {
-        const that = this;
-        const socket = new WebSocket('ws://localhost:5000');
-
-        socket.onmessage = function (event) {
-            const chair = JSON.parse(event.data);
-            const updatedChairs = that.updateChairInChairs(that.chairs, chair);
-            that.chairs = updatedChairs;
-        }
     }
 
     openTargetSocket() {
@@ -83,11 +69,6 @@ class Sideboard extends Component{
                 console.log('connection is closed');
             };
         }
-    }
-
-    updateChairInChairs(chairs, item) {
-        const filteredChairs = chairs.filter(chair => item.id !== chair.id);
-        return [...filteredChairs, item];
     }
 
     render() {
