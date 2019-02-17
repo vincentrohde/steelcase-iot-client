@@ -2,41 +2,32 @@ const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 5000 });
 
-const chairs = [
-    {
-        id: 1,
+const chairGenerator = (idRange, xRange, bearingRange) => {
+    let chair = {
+        id: 0,
         x: 0,
-        y: 0,
-        bearing: 90
-    },
-    {
-        id: 2,
-        x: 200,
-        y: 200,
-        bearing: 90
-    },
-    {
-        id: 3,
-        x: 300,
-        y: 300,
+        y: 100,
         bearing: 90
     }
-];
+
+    chair.id = Math.round(Math.random() * (idRange - chair.id) + chair.id);
+    chair.x = Math.round(Math.random() * (xRange - chair.x) + chair.x);
+    chair.bearing = Math.round(Math.random() * (bearingRange - chair.bearing) + chair.bearing);
+
+    return chair;
+}
 
 const mockResponse = (socket) => {
-    let i = 0;
+    const interval = setInterval(() => {
+        socket.send(JSON.stringify(chairGenerator(3, 200, 120)));
+    }, 500);
 
-    while(i < 3) {
-        chairs.forEach(chair => {
-            chair.bearing += 20;
-            socket.send(JSON.stringify(chair));
-        });
-        i++;
-    }
+    socket.on('close', function() {
+        clearInterval(interval);
+    });
 };
 
 wss.on('connection', function connection(ws) {
     ws.on('message', function incoming(message) {});
-
     mockResponse(ws);
 });
