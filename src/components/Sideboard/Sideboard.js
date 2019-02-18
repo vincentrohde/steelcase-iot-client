@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect, actions } from "../../stores/ChairsStore";
+
 import UserCard from "./UserCard/UserCard";
 import Orders from "./Orders/Orders";
 
@@ -8,6 +10,7 @@ class Sideboard extends Component{
     constructor(props) {
         super();
         this.props = props;
+        this.chairs = this.props.chairs;
     }
 
     componentWillMount() {}
@@ -44,7 +47,10 @@ class Sideboard extends Component{
         }
     }
 
+    fillTargetsWithChairs() {}
+
     render() {
+
         return (
             <div className="Sideboard">
                 <UserCard/>
@@ -54,4 +60,4 @@ class Sideboard extends Component{
     }
 }
 
-export default Sideboard;
+export default connect(({ chairs }) => ({ chairs }))(Sideboard);

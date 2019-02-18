@@ -25,8 +25,8 @@ class RoomOverview extends Component {
                 <div className="RoomOverview-container">
                     <Provider>
                         <Simulation />
+                        <Sideboard />
                     </Provider>
-                    <Sideboard />
                 </div>
             </div>
         )
