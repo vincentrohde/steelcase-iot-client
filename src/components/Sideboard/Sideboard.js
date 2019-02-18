@@ -18,20 +18,25 @@ class Sideboard extends Component{
     componentDidMount() {
         const sideboard = document.querySelector('.Sideboard');
         const openTargetSocket = this.openTargetSocket.bind(this);
+        const fillTargetsWithChairs = this.fillTargetsWithChairs.bind(this);
 
-        sideboard.addEventListener('click', function(event) {
-            const target = event.target;
+        sideboard.addEventListener('click', function({ target }) {
             if(target.classList.contains('Order')) {
-                const orderTarget = target.dataset.target;
-                openTargetSocket(orderTarget);
+                const orderTarget = JSON.parse(target.dataset.target);
+
+                // prevent websocket creation if chairs and targets don't
+                // match up
+                if(fillTargetsWithChairs(orderTarget)) {
+                    openTargetSocket(orderTarget);
+                }
             }
         });
 
     }
 
-    openTargetSocket(target) {
+    openTargetSocket(order) {
         const connection = new WebSocket('ws://10.51.7.233:9898');
-        console.log(JSON.parse(target));
+        console.log(order);
 
         connection.onopen = function() {
             connection.onmessage = function (response) {
@@ -39,7 +44,7 @@ class Sideboard extends Component{
                 console.log(data);
             };
 
-            connection.send(target);
+            connection.send(order);
 
             connection.onclose = function() {
                 console.log('connection is closed');
@@ -47,10 +52,22 @@ class Sideboard extends Component{
         }
     }
 
-    fillTargetsWithChairs() {}
+    fillTargetsWithChairs({ targets }) {
+        const chairs = this.props.chairs;
+
+        if(chairs.length !== targets.length) {
+            return false;
+        }
+
+        targets.forEach((target, index) => {
+            const chair = chairs[index];
+            target.id = chair.id;
+        });
+
+        return true;
+    }
 
     render() {
-
         return (
             <div className="Sideboard">
                 <UserCard/>
