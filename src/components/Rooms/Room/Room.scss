@@ -4,18 +4,17 @@
     display: block;
     margin: $size-s 0;
     text-decoration: none;
-    width: 100%;
     height: 225px;
     background: $white;
     border-radius: 15px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    padding: 0.8em 0 0 0.5em;
+    padding: $size-s;
     color: $dark-red;
     font-size: 4em;
     font-weight: bold;
-    text-shadow: -1px 11px 13px rgba(0,0,0,0.16);
 
     &:hover {
-        background: darken($white, 10%);
+        background: lighten($dark-red, 40%);
+        color: $white;
     }
 }

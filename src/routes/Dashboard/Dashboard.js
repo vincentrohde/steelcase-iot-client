@@ -15,10 +15,8 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="DashboardPage wavy-gradient">
-                <div className="Navigation-container">
+                <div className="content-container">
                     <Navigation/>
-                </div>
-                <div className="Lane-container">
                     <Lane />
                 </div>
             </div>
