@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from "../../stores/ChairsStore";
 
 import Simulation from '../../components/Simulation/Simulation';
 import Sideboard from '../../components/Sideboard/Sideboard';
@@ -23,10 +22,8 @@ class RoomOverview extends Component {
         return (
             <div className="RoomOverviewPage">
                 <div className="RoomOverview-container">
-                    <Provider>
-                        <Simulation />
-                        <Sideboard />
-                    </Provider>
+                    <Simulation />
+                    <Sideboard />
                 </div>
             </div>
         )

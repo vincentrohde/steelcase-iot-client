@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect, actions } from "../../stores/ChairsStore";
+import { connect, actions } from "../../stores/Store";
 
 import Chair from "../Chair/Chair"
 
