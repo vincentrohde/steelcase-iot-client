@@ -64,14 +64,21 @@ class AppRouter extends Component {
 
     addStoreListener() {
         subscribe((action, state) => {
-            axios.post(this.server, state)
-                .then(function (res) {
-                    const { data } = res;
-                    console.log(data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            if(action !== 'updateChairs') {
+                const newState = {
+                    orders: state.orders,
+                    rooms: state.rooms
+                }
+
+                axios.post(this.server, newState)
+                    .then(function (res) {
+                        const { data } = res;
+                        console.log(data);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
         });
     }
 

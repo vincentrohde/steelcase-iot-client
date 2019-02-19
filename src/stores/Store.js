@@ -2,6 +2,7 @@ import createStore from "react-waterfall";
 
 const store = {
     initialState: {
+        chairs: [],
         orders: [],
         rooms: []
     },
@@ -24,6 +25,13 @@ const store = {
             return {
                 ...prevState,
                 rooms: newValue
+            }
+        },
+        updateChairs: (prevState, actions, newState) => {
+            const newChairs = newState;
+            return {
+                ...prevState,
+                chairs: newChairs
             }
         }
     }

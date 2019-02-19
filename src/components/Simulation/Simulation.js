@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect, actions } from "../../stores/ChairsStore";
+import { connect, actions } from "../../stores/Store";
 
 import Chair from "../Chair/Chair"
 
@@ -19,9 +19,18 @@ class Simulation extends Component{
 
         const simulationWidth = Number(simulationWidthPX.substring(0, simulationWidthPX.length - 2));
         const chairWidth = 200;
-        const conversionRate = this.calculateConversionFactor(simulationWidth - chairWidth);
+        const conversionRate = (simulationWidth - chairWidth) / 1008;
 
         this.openChairSocket(conversionRate);
+    }
+
+    componentWillUnmount() {
+        if(this.socket) {
+            this.socket.onclose = () => {
+                console.log('Closed Camera Socket');
+            };
+            this.socket.close();
+        }
     }
 
     openChairSocket(conversionRate) {
@@ -29,9 +38,9 @@ class Simulation extends Component{
 
         // for mock use mock/chair-server.js from the server repo
         // https://github.com/vincentrohde/iot_app_server
-        const socket = new WebSocket('ws://localhost:5000');
+        that.socket = new WebSocket('ws://localhost:5000');
 
-        socket.onmessage = function (event) {
+        that.socket.onmessage = function (event) {
             const chair = JSON.parse(event.data);
             chair.x = Math.round(chair.x * conversionRate);
             chair.y = Math.round(chair.y * conversionRate);
@@ -46,10 +55,6 @@ class Simulation extends Component{
     updateChairInChairs(chairs, item) {
         const filteredChairs = chairs.filter(chair => item.id !== chair.id);
         return [...filteredChairs, item];
-    }
-
-    calculateConversionFactor(width) {
-        return (width / 1008);
     }
 
     render() {
