@@ -8,7 +8,7 @@ const randomValue = (min, max) => {
 
 const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
     let chair = {
-        id: 0,
+        id: 197,
         x: 0,
         y: 0,
         bearing: 0
@@ -22,19 +22,22 @@ const chairGenerator = (idRange, xRange, yRange, bearingRange) => {
     return chair;
 }
 
-const mockResponse = (socket) => {
+const mockResponse = (socket, client) => {
     const interval = setInterval(() => {
-        const chair = chairGenerator(3, 1008, 1008, 360);
+        const chair = chairGenerator(200, 1008, 1008, 360);
         console.log(chair);
         socket.send(JSON.stringify(chair));
     }, 200);
 
     socket.on('close', function() {
+        console.log(client + ' closed the connection');
         clearInterval(interval);
     });
 };
 
-wss.on('connection', function connection(ws) {
+wss.on('connection', function connection(ws, req) {
+    const client = req.connection.remoteAddress;
+
     ws.on('message', function incoming(message) {});
-    mockResponse(ws);
+    mockResponse(ws, client);
 });
