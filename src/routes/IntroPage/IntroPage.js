@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './IntroPage.scss';
 import CTAButton from '../../components/CTAButton/CTAButton';
 import Headline from '../../components/Headline/Headline';
+import Login from '../../components/Login/Login';
+
 
 class IntroPage extends Component {
     constructor(props) {
@@ -24,9 +26,13 @@ class IntroPage extends Component {
                 <div className="container">
                     <Headline title={this.title} />
                     <p className="description">{introtext}</p>
+                    <div className="form-wrap">
+                        <Login/>
+                    </div>
                     <div className="cta-container">
                         <CTAButton/>
                     </div>
+
                 </div>
             </div>
         )
