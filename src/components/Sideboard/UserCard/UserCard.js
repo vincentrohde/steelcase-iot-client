@@ -6,11 +6,14 @@ import Time from "./Time/Time";
 import './UserCard.scss';
 
 
-const UserCard = () => {
+const UserCard = (props) => {
+    const { id } = props;
+
     return (
             <div className="UserCard">
                 <div className="information-container">
-                    <Time/>
+                    <h2 className="title">Raum { id }</h2>
+                    <Time />
                 </div>
                 <div className="AvatarIcon-container">
                         <div className="AvatarIcon-container_UserCard">

@@ -6,7 +6,7 @@ import './Navigation.scss';
 const Navigation = () => {
     return (
         <div className="Navigation">
-            <Headline title={"Dashboard"}/>
+            <Headline title={"Smart Chairs"} />
             <div className="AvatarIcon-container_Navigation">
                 <AvatarIcon/>
             </div>

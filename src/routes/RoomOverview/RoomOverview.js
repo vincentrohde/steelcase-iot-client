@@ -23,7 +23,7 @@ class RoomOverview extends Component {
             <div className="RoomOverviewPage">
                 <div className="RoomOverview-container">
                     <Simulation />
-                    <Sideboard />
+                    <Sideboard id={this.id} />
                 </div>
             </div>
         )

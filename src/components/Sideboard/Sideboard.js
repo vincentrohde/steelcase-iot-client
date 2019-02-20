@@ -11,6 +11,7 @@ class Sideboard extends Component{
         super();
         this.props = props;
         this.chairs = this.props.chairs;
+        this.id = this.props.id;
     }
 
     componentWillMount() {}
@@ -70,8 +71,8 @@ class Sideboard extends Component{
     render() {
         return (
             <div className="Sideboard">
-                <UserCard/>
-                <Orders/>
+                <UserCard id={this.id} />
+                <Orders />
             </div>
         );
     }

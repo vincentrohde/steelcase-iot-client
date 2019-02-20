@@ -12,6 +12,10 @@ class Dashboard extends Component {
         this.props = props;
     }
 
+    componentDidMount() {
+        document.title = 'Smart Chairs';
+    }
+
     render() {
         return (
             <div className="DashboardPage wavy-gradient">
