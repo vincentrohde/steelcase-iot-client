@@ -13,4 +13,20 @@
     .title {
         @include center;
     }
+    .container {
+        width:100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .discussion {
+        background-image: url("../../../../assets/images/discussion.svg");
+    }
+    .lane_vertical {
+        background-image: url("../../../../assets/images/lane_vertical.svg");
+    }
+    .lane_horizontal {
+        background-image: url("../../../../assets/images/lane_horizontal.svg");
+    }
 }

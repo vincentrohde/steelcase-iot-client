@@ -10,7 +10,8 @@ const Order = (props) => {
 
     return (
         <div className="Order" data-target={JSON.stringify(target)}>
-            <h3 className="title">{name}</h3>
+            <div className={`container ${name}`}>
+            </div>
         </div>
     );
 }
