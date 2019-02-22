@@ -1,0 +1,11 @@
+@import "../../scss/mixins/center";
+
+.Chair {
+    position: relative;
+
+    .chair-icon {
+        @include center;
+        width: 50%;
+        max-height: 100%;
+    }
+}

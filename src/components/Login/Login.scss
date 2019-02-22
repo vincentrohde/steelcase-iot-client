@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  label {
+    width: 100%;
+    text-align: left;
+  }
+
+  input[type=text] {
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid #DA2B4D;
+    flex-grow: 2;
+    height: 5vh;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 2em;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 2em;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 2em;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 2em;
+  }
+  input[type=submit] {
+    padding: 0em 3em;
+    margin-left: 1em;
+    background-color: yellowgreen;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    height: 3vh;
+  }
+}

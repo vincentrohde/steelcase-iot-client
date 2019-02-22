@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.Rooms {
+    color: $red;
+    font-weight: $fw-bold;
+    margin-bottom: .2em;
+
+    .add-room {
+        padding: 1.5em;
+        background: white;
+        border: 0;
+        border-radius: 20px;
+        font-size: 16px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        text-decoration: none;
+        font-weight: bold;
+        color: $dark-red;
+        margin-top: 1em;
+    }
+}

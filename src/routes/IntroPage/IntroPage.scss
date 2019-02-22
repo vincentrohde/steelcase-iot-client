@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+
+.intro {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background: $intro-page-bg;
+    .container {
+        height: 80vh;
+        width: 75vw;
+        margin: 9vh auto;
+        background: $white;
+        border-radius: 32px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding-top: 12vh;
+    }
+    .title {
+        color: $red;
+    }
+    .description {
+        margin: 9vh auto 12vh auto;
+        width: 45vw;
+        color: $IntroPageDescription;
+        font-size: $size-description;
+        line-height: 1.8em;
+    }
+    .cta-container {
+        height: 59px;
+        width: 312px;
+        margin: 0 auto;
+    }
+    .form-wrap {
+        width: 58%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 4em;
+    }
+}

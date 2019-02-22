@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+@import "../../scss/mixins/center";
+
+.Simulation {
+    position: relative;
+    width: 55vw;
+    height: 55vw;
+    margin: 5vw;
+    border: 2px solid lighten($black, 70%);
+
+    .Chair {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.CreateOrder {
+
+    .order-name {
+        display: block;
+        width: 100%;
+        padding: $size-s;
+        margin: $size-m 0 ($size-m / 2);
+        font-size: 1.3rem;
+        text-align: center;
+        border: 0;
+        border-bottom: 2px solid #02A677;
+    }
+
+    .grid-container {
+        padding: 2vh 0;
+        height: 70vh;
+    }
+}

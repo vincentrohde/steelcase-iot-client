@@ -52,6 +52,13 @@ Everything related to components should be named in <a href="http://wiki.c2.com/
 
 ### Getting Started
 
+Clone the <a href="https://github.com/vincentrohde/iot_app_server">Server 
+Repository</a> and install the dependencies. Run the `app.js` to start the 
+general state server. To get mock camera 
+input, you will have to run the `mock/chair-server.js`.
+
+Now you can run the React App:
+
 1. `npm install`
 2. `npm start`
 
@@ -63,6 +70,6 @@ The project uses the following dependencies:
 
 **<a href="https://github.com/ReactTraining/react-router">React Router</a>**
 
-**<a href="https://redux.js.org/">Redux</a>**
+**<a href="https://github.com/didierfranc/react-waterfall">React Waterfall</a>**
 
 <a href="#iot_app">Back To Top</a>

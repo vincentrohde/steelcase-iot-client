@@ -1,11 +1,14 @@
 import React from 'react';
 import './CTAButton.scss';
+import { Link } from 'react-router-dom';
 
-// this is the component for the call to action Button
+const CTAButton = (props) => {
+    const title = props.title || 'Los';
+    const linkTo = props.link || '/';
 
-const CTAButton = () => {
     return (
-        <div className="CTAButton">Das ist ein call to action button.</div>
+        <Link className="CTAButton" to={linkTo}>{title}</Link>
     );
 }
+
 export default CTAButton;
