@@ -1,8 +1,11 @@
+@import "../../scss/variables";
+
 .RoomOverviewPage {
     height: 100vh;
     width: 100vw;
     padding: 0;
     margin: 0;
+    background: $intro-page-bg;
 
     .RoomOverview-container {
         display: flex;

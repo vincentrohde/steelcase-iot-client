@@ -4,4 +4,9 @@
     background-image: linear-gradient($lightgreen, $darkgreen);
     padding: 1em;
     width: 35%;
+
+    .CTAButton {
+        color: $red;
+        background: $white;
+    }
 }

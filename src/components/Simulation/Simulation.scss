@@ -1,3 +1,4 @@
+@import "../../scss/variables";
 @import "../../scss/mixins/center";
 
 .Simulation {
@@ -5,6 +6,7 @@
     width: 55vw;
     height: 55vw;
     margin: 5vw;
+    border: 2px solid lighten($black, 70%);
 
     .Chair {
         position: absolute;

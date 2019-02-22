@@ -3,6 +3,7 @@ import { connect } from "../../stores/Store";
 
 import UserCard from "./UserCard/UserCard";
 import Orders from "./Orders/Orders";
+import CTAButton from '../CTAButton/CTAButton';
 
 import './Sideboard.scss';
 
@@ -73,6 +74,9 @@ class Sideboard extends Component{
             <div className="Sideboard">
                 <UserCard id={this.id} />
                 <Orders />
+                <div className="cta-container">
+                    <CTAButton title={"zu den Räumen"} />
+                </div>
             </div>
         );
     }
