@@ -16,9 +16,12 @@ class Orders extends Component {
 
         return (
             <div className="OrderLane-container">
-                <div className="AddButton-container">
-                    <AddButton/>
-                </div>
+                {/*<div className="AddButton-container">*/}
+                    {/*<AddButton/>*/}
+                {/*</div>*/}
+                {/*<div className="title-container">*/}
+                    {/*<h3 className="title">Anordnungen</h3>*/}
+                {/*</div>*/}
                 {
                     orders.map((order, index) => <Order information={order} key={index} />)
                 }

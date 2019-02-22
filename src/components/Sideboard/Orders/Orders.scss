@@ -14,4 +14,14 @@
         display: flex;
     }
 
+    .title-container {
+        flex: 0 0 100%;
+        width: 100%;
+
+        .title {
+            color: $white;
+            font-size: 25px;
+        }
+    }
+
 }
