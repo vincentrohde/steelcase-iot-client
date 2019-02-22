@@ -1,7 +1,5 @@
 ## iot_app
 
-Please commit to development branch.
-
 React App for the iot project.
 
 1. <a href="#guidelines">Guidelines</a>
