@@ -13,7 +13,7 @@ class AppRouter extends Component {
     constructor(props) {
         super();
         this.props = props;
-        this.server = 'http://localhost:4000';
+        this.server = 'http://10.51.7.199:4000';
         this.initializeListener();
     }
 

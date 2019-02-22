@@ -38,7 +38,7 @@ class Simulation extends Component{
 
         // for mock use mock/chair-server.js from the server repo
         // https://github.com/vincentrohde/iot_app_server
-        that.socket = new WebSocket('ws://localhost:5000');
+        that.socket = new WebSocket('ws://10.51.7.228:5678');
 
         that.socket.onmessage = function (event) {
             const chair = JSON.parse(event.data);
