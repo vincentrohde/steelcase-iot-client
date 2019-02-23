@@ -1,5 +1,5 @@
 # IOT App - Server Repository
-Save serverside code here.
+Different servers that provide features to generate mock data, such as user profiles and robots(positions, ids), for the iot_app project
 
 ## Servers
 
