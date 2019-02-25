@@ -1,73 +1,93 @@
 ## iot_app
 
-React App for the iot project.
+React application to display and instruct chair(robot) movement. Making use of camera data and a pathfinding algorithm.
+
+## Table of Contents
 
 1. <a href="#guidelines">Guidelines</a>
 2. <a href="#getting-started">Getting Started</a>
-3. <a href="#resources">Resources</a>
+3. <a href="#built-with">Built With</a>
+4. <a href="#authors">Authors</a>
 
-### Guidelines
+## Guidelines
 
-Please take a look at these documents before starting right away.
+Please take a look at these documents before starting to code right away.
 
-+ SCSS: <a href="https://github.com/nikita-kit/nikita-css">nikita-css</a>
-+ JS/ ES6: <a href="https://github.com/nikita-kit/nikita-js">nikita-js</a>
+- [SCSS](https://github.com/nikita-kit/nikita-css) - The Single Page Application library
+- [JS](https://github.com/nikita-kit/nikita-js) - The Single Page Application library
 
-#### React
+## Getting Started
 
-##### Components
+### Prerequisites
 
-Components belong into the `src/components` directory and should be placed 
-into their own subdirectory. Each component should come with its 
-own SCSS file.
+To run/use this application, you need to have **Node.js** and its package manager **npm** installed on your local environment.
 
-```
-src
-|   components
-|   |    Header
-|   |    |  Header.js
-|   |    |  Header.scss
-```
 
-**Presentational and Container Components**
+### Installing
 
-Components should be split into Presentational(dumb, templates) and Container
-(smart) 
-components.
+#### Server Repository
 
-<a href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0">Difference Explained</a>
+We use this repository for our mock servers:
+https://github.com/vincentrohde/iot_app_server
 
-<a href="https://gist.github.com/chantastic/fc9e3853464dffdb1e3c">Example</a>
+Clone the repository
 
-**Stateless Components**
+`git clone https://github.com/vincentrohde/iot_app_server.git`
 
-When creating components, try to use a 
-<a href="https://programmingwithmosh.com/react/react-functional-components/">stateless component</a> whenever possible.
+Open the repository
 
-**Naming Components**
+`cd iot_app_server`
 
-Everything related to components should be named in <a href="http://wiki.c2.com/?PascalCase">Pascal Case</a>.
+Install the dependencies
 
-### Getting Started
+`npm install`
 
-Clone the <a href="https://github.com/vincentrohde/iot_app_server">Server 
-Repository</a> and install the dependencies. Run the `app.js` to start the 
-general state server. To get mock camera 
-input, you will have to run the `mock/chair-server.js`.
+Start the State Server
 
-Now you can run the React App:
+`node app.js`
 
-1. `npm install`
-2. `npm start`
+Generate Mock Camera Data
 
-### Resources
+`node mock/chair-server.js`
 
-#### Dependencies
 
-The project uses the following dependencies:
+#### App
 
-**<a href="https://github.com/ReactTraining/react-router">React Router</a>**
+Clone the repository
 
-**<a href="https://github.com/didierfranc/react-waterfall">React Waterfall</a>**
+`git clone https://github.com/vincentrohde/iot_app.git`
+
+Open the repository
+
+`cd iot_app_server`
+
+Install the dependencies
+
+`npm install`
+
+Start the development server
+
+`npm start`
+
+Now you can run the app in the browser, using this URL:
+
+http://localhost:3000
+
+
+## Built With
+
+- [React](https://reactjs.org/) - The Single Page Application library
+- [Sass](https://github.com/sass/node-sass) - The CSS preprocessor
+- [React Router v4](https://github.com/ReactTraining/react-router) - The router
+- [React Waterfall](https://github.com/didierfranc/react-waterfall) - The state manager
+- [Axios](https://github.com/axios/axios) - The http client
+- [create-react-app](https://github.com/facebook/create-react-app) - The boilerplate for our project
+
+
+## Authors
+
+- [Momaritti](https://github.com/Momaritti)
+- [nastasios](https://github.com/nastasios)
+- [vincentrohde](https://github.com/vincentrohde)
 
 <a href="#iot_app">Back To Top</a>
