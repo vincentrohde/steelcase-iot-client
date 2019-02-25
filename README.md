@@ -15,8 +15,8 @@ React application to display and instruct chair(robot) movement. Making use of c
 
 Please take a look at these documents before starting to code right away.
 
-- [SCSS](https://github.com/nikita-kit/nikita-css) - The Single Page Application library
-- [JS](https://github.com/nikita-kit/nikita-js) - The Single Page Application library
+- [SCSS](https://github.com/nikita-kit/nikita-css) - Nikita SCSS Styleguide
+- [JS](https://github.com/nikita-kit/nikita-js) - Nikita JS Styleguide
 
 ## Getting Started
 
@@ -88,8 +88,8 @@ http://localhost:3000
 
 ## Authors
 
-- [Momaritti](https://github.com/Momaritti)
-- [nastasios](https://github.com/nastasios)
-- [vincentrohde](https://github.com/vincentrohde)
+- [Momaritti](https://github.com/Momaritti) - Marie-Theres Monz
+- [nastasios](https://github.com/nastasios) - Nastasios Gianoulis
+- [vincentrohde](https://github.com/vincentrohde) - Vincent Rohde
 
 <a href="#iot_app">Back To Top</a>
