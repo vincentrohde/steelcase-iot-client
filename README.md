@@ -2,6 +2,8 @@
 
 React application to display and instruct chair(robot) movement. Making use of camera data and a pathfinding algorithm.
 
+![iot_app](https://user-images.githubusercontent.com/25182140/53328197-be22d500-38e9-11e9-8c9d-f7ff747f5f8c.png)
+
 ## Table of Contents
 
 1. <a href="#guidelines">Guidelines</a>
