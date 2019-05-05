@@ -50,7 +50,7 @@ Start the State Server
 
 Generate Mock Camera Data
 
-`node mock/chair-server.js`
+`node mocks/chair-server.js`
 
 
 #### App
