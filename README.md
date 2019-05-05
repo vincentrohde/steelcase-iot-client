@@ -75,6 +75,26 @@ Now you can run the app in the browser, using this URL:
 
 http://localhost:3000
 
+#### If you want to use a custom Websocket Server to send data to, you are required to update the Order Component's Order.js file.
+
+Changing the server address (src/components/Sideboard/Orders/Order/Order.js):
+
+`let feServer = new WebSocket("ws://{{ ip:port }}");`
+
+Updating the schema (src/components/Sideboard/Orders/Order/Order.js):
+
+```
+function sendMessage(name) {
+    console.log(name);
+    if (name === "discussion") {
+        feServer.send(JSON.stringify({{ your schema }}));
+    } else if (name === "lane_vertical") {
+        feServer.send(JSON.stringify({{ your schema }}));
+    } else if(name === "lane_horizontal"){
+        feServer.send(JSON.stringify({{ your schema }}));
+    }
+}
+```
 
 ## Built With
 
