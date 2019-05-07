@@ -19,7 +19,7 @@ class Simulation extends Component{
 
         const simulationWidth = Number(simulationWidthPX.substring(0, simulationWidthPX.length - 2));
         const chairWidth = 200;
-        const conversionRate = (simulationWidth - chairWidth) / 1008;
+        const conversionRate = 1;
 
         this.openChairSocket(conversionRate);
     }
@@ -38,7 +38,7 @@ class Simulation extends Component{
 
         // for mock use mock/chair-server.js from the server repo
         // https://github.com/vincentrohde/iot_app_server
-        that.socket = new WebSocket('ws://10.51.7.228:5678');
+        that.socket = new WebSocket('ws://10.51.4.206:5678');
 
         that.socket.onmessage = function (event) {
             const chair = JSON.parse(event.data);
@@ -64,7 +64,9 @@ class Simulation extends Component{
                 {
                     chairs.map((chair, index) => {
                         const template = {
-                            transform: `translate(${chair.x}px, ${chair.y}px) rotate(${chair.bearing}deg)`
+                            left: `${chair.x}px`,
+                            top: `${chair.y}px`,
+                            transform: `translate(-50%, -50%) rotate(${chair.bearing}deg)`,
                         }
 
                         return (
