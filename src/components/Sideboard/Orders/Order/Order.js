@@ -12,17 +12,55 @@ const Order = (props) => {
 
     feServer.onopen = function () {
         console.log("connected");
-
     }
 
     function sendMessage(name) {
         console.log(name);
         if (name === "discussion") {
-            feServer.send(JSON.stringify({formation: 3}));
+            feServer.send(JSON.stringify(
+                {
+                    receiver: 'controller',
+                    content: [
+                        {
+                            id: 14,
+                            target: {
+                                x: 1,
+                                y: 1
+                            }
+                        }
+                    ]
+                }
+            ));
         } else if (name === "lane_vertical") {
-            feServer.send(JSON.stringify({formation: 4}));
+            feServer.send(JSON.stringify(
+                {
+                    receiver: 'controller',
+                    content: [
+                        {
+                            id: 15,
+                            target: {
+                                x: 1,
+                                y: 1
+                            }
+                        }
+                    ]
+                }
+            ));
         } else if(name === "lane_horizontal"){
-            feServer.send(JSON.stringify({formation: 1}));
+            feServer.send(JSON.stringify(
+                {
+                    receiver: 'controller',
+                    content: [
+                        {
+                            id: 16,
+                            target: {
+                                x: 1,
+                                y: 1
+                            }
+                        }
+                    ]
+                }
+            ));
         }
     }
 
