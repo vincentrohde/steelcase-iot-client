@@ -44,8 +44,13 @@ class AppRouter extends Component {
                     ],
                     rooms: [
                         {
-                            id: 504,
+                            id: 5,
                             name: 'Sport',
+                            orders: [1, 2, 3]
+                        },
+                        {
+                            id: 3,
+                            name: 'Biologie',
                             orders: [1, 2, 3]
                         }
                     ]
@@ -53,8 +58,8 @@ class AppRouter extends Component {
 
                 actions.addState(data);
 
-                console.log('Fallback State added.');
-                console.log('Error occurred in Server request: ', error);
+                //console.log('Fallback State added.');
+                //console.log('Error occurred in Server request: ', error);
             });
     }
 

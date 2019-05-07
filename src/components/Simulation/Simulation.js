@@ -52,6 +52,7 @@ class Simulation extends Component{
         }
     }
 
+
     updateChairInChairs(chairs, item) {
         const filteredChairs = chairs.filter(chair => item.id !== chair.id);
         return [...filteredChairs, item];
@@ -66,7 +67,7 @@ class Simulation extends Component{
                         const template = {
                             left: `${chair.x}px`,
                             top: `${chair.y}px`,
-                            transform: `translate(-50%, -50%) rotate(${chair.bearing}deg)`,
+                            transform: `translate3d(-50%, -50%) rotate(${chair.bearing}deg)`,
                         }
 
                         return (

@@ -20,7 +20,7 @@ class Orders extends Component {
                     {/*<h3 className="title">Anordnungen</h3>*/}
                 {/*</div>*/}
                 <div className="AddButton-container">
-                    <AddButton/>
+                <AddButton/>
                 </div>
                 {
                     orders.map((order, index) => <Order information={order} key={index} />)
