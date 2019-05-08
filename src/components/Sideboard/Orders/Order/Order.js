@@ -28,7 +28,7 @@ const Order = (props) => {
 
     return (
         <div className="Order" onClick={sendMessage.bind(this, name)} data-target={JSON.stringify(target)}>
-            <div className={`container ${name}`}>
+            <div className="discussion">
             </div>
         </div>
     );
