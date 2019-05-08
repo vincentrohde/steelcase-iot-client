@@ -16,13 +16,33 @@ const Order = (props) => {
 
     function sendMessage(name) {
         console.log(name);
+        feServer.send(JSON.stringify(
+            {
+                receiver: 'controller',
+                content: [
+                    {
+                        id: 115,
+                        target: {
+                            x: 2,
+                            y: 1
+                        }
+                    },
+                    {
+                        id: 8,
+                        target: {
+                            x: 1,
+                            y: 1
+                        }
+                    }
+                ]
+            }));
         if (name === "discussion") {
             feServer.send(JSON.stringify(
                 {
                     receiver: 'controller',
                     content: [
                         {
-                            id: 14,
+                            id: 15,
                             target: {
                                 x: 1,
                                 y: 1
@@ -46,7 +66,7 @@ const Order = (props) => {
                     ]
                 }
             ));
-        } else if(name === "lane_horizontal"){
+        } else if (name === "lane_horizontal") {
             feServer.send(JSON.stringify(
                 {
                     receiver: 'controller',
@@ -67,6 +87,7 @@ const Order = (props) => {
     return (
         <div className="Order" onClick={sendMessage.bind(this, name)} data-target={JSON.stringify(target)}>
             <div className={`container ${name}`}>
+                hallo
             </div>
         </div>
     );
