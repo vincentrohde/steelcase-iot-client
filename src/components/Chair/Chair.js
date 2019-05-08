@@ -19,7 +19,7 @@ class Chair extends Component {
 
     render() {
         return (
-            <div className="Chair" style={
+            <div className="Chair" data-id={this.props.id} style={
                 this.props.template ? this.props.template : this.gridPosition} >
                 <img className="chair-icon" src={chairIcon} alt="Chair Icon"/>
             </div>

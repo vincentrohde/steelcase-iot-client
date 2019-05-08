@@ -13,15 +13,12 @@ class Simulation extends Component{
     }
 
     componentDidMount() {
-        const simulation = document.querySelector('.Simulation');
-        const simulationStyles = window.getComputedStyle(simulation, null);
-        const simulationWidthPX = simulationStyles.getPropertyValue('width');
+        this.simulation = document.querySelector('.Simulation');
+        this.simulationRect = this.simulation.getBoundingClientRect();
 
-        const simulationWidth = Number(simulationWidthPX.substring(0, simulationWidthPX.length - 2));
-        const chairWidth = 200;
-        const conversionRate = 1;
+        this.openControllerSocket();
 
-        this.openChairSocket(conversionRate);
+        this.openChairSocket();
     }
 
     componentWillUnmount() {
@@ -33,8 +30,41 @@ class Simulation extends Component{
         }
     }
 
-    openChairSocket(conversionRate) {
+    initializeEventListeners() {
         const that = this;
+
+        this.simulation.addEventListener("click", (event) => {
+            const target = event.target;
+            const chair = target.closest('.Chair');
+
+            if (chair) {
+                that.selectedChair = chair;
+            } else {
+                if (that.selectedChair) {
+                    const { id } = that.selectedChair.dataset;
+                    const message = {
+                        receiver: 'controller',
+                        content: [
+                            {
+                                id,
+                                target: {
+                                    x: event.clientX - that.simulationRect.left,
+                                    y: event.clientY - that.simulationRect.top
+                                }
+                            }
+                        ]
+                    };
+
+                    console.log('### message: ', message);
+                    that.controllerSocket.send(JSON.stringify(message));
+                }
+            }
+        });
+    }
+
+    openChairSocket() {
+        const that = this;
+        const conversionRate = 1;
 
         // for mock use mock/chair-server.js from the server repo
         // https://github.com/vincentrohde/iot_app_server
@@ -49,9 +79,22 @@ class Simulation extends Component{
             that.chairs = updatedChairs;
 
             actions.updateChairs(that.chairs);
-        }
+        };
     }
 
+    openControllerSocket() {
+        const that = this;
+        that.controllerSocket = new WebSocket('ws://10.51.7.233:9898');
+
+        that.controllerSocket.onclose = function() {
+            console.log('Controller Socket connection is closed');
+        };
+
+        that.controllerSocket.onopen = function() {
+            console.log('Controller Socket connection is open');
+            that.initializeEventListeners();
+        };
+    }
 
     updateChairInChairs(chairs, item) {
         const filteredChairs = chairs.filter(chair => item.id !== chair.id);
@@ -67,11 +110,11 @@ class Simulation extends Component{
                         const template = {
                             left: `${chair.x}px`,
                             top: `${chair.y}px`,
-                            transform: `translate3d(-50%, -50%) rotate(${chair.bearing}deg)`,
-                        }
+                            transform: `translate(-50%, -50%) rotate(${chair.bearing}deg)`,
+                        };
 
                         return (
-                            <Chair key={index} isGrid={false} template={template} />
+                            <Chair key={index} id={chair.id} isGrid={false} template={template} />
                         )
                     })
                 }
@@ -81,3 +124,16 @@ class Simulation extends Component{
 };
 
 export default connect(({ chairs }) => ({ chairs }))(Simulation);
+
+
+/*
+const simulation = document.querySelector('.Simulation');
+simulation.addEventListener("click", newChairpostion);
+
+function newChairPosition(e) {
+    const xPostion = e.clientX;
+    const yPostion = e.clientY;
+
+    const translateValue = "translate3d(" + xPosition + "px," + yPosition + "px, 0)";
+    chair.style.transform = translateValue;
+}*/
