@@ -37,7 +37,7 @@ class Sideboard extends Component{
     }
 
     openTargetSocket(order) {
-        const connection = new WebSocket('ws://10.51.7.233:9898');
+        const connection = new WebSocket('ws://192.168.8.102:9898');
         console.log(order);
 
         connection.onopen = function() {

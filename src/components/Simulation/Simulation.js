@@ -68,7 +68,7 @@ class Simulation extends Component{
 
         // for mock use mock/chair-server.js from the server repo
         // https://github.com/vincentrohde/iot_app_server
-        that.socket = new WebSocket('ws://10.51.4.206:5678');
+        that.socket = new WebSocket('ws://192.168.8.104:5678');
 
         that.socket.onmessage = function (event) {
             const chair = JSON.parse(event.data);
@@ -84,7 +84,7 @@ class Simulation extends Component{
 
     openControllerSocket() {
         const that = this;
-        that.controllerSocket = new WebSocket('ws://10.51.7.233:9898');
+        that.controllerSocket = new WebSocket('ws://192.168.8.102:9898');
 
         that.controllerSocket.onclose = function() {
             console.log('Controller Socket connection is closed');

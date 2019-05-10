@@ -8,7 +8,7 @@ const Order = (props) => {
         targets: positions
     }
 
-    let feServer = new WebSocket("ws://10.51.7.233:9898");
+    let feServer = new WebSocket("ws://192.168.8.102:9898");
 
     feServer.onopen = function () {
         console.log("connected");
