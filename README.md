@@ -6,17 +6,9 @@ React application to display and instruct chair(robot) movement. Making use of c
 
 ## Table of Contents
 
-1. <a href="#guidelines">Guidelines</a>
-2. <a href="#getting-started">Getting Started</a>
-3. <a href="#built-with">Built With</a>
-4. <a href="#authors">Authors</a>
-
-## Guidelines
-
-Please take a look at these documents before starting to code right away.
-
-- [SCSS](https://github.com/nikita-kit/nikita-css) - Nikita SCSS Styleguide
-- [JS](https://github.com/nikita-kit/nikita-js) - Nikita JS Styleguide
+1. <a href="#getting-started">Getting Started</a>
+2. <a href="#built-with">Built With</a>
+3. <a href="#authors">Authors</a>
 
 ## Getting Started
 
