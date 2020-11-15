@@ -1,6 +1,6 @@
 import React from 'react';
-import Headline from '../../components/Headline/Headline';
-import AvatarIcon from '../../components/AvatarIcon/AvatarIcon';
+import Headline from '../Headline/Headline';
+import AvatarIcon from '../AvatarIcon/AvatarIcon';
 import './Navigation.scss';
 
 const Navigation = () => {

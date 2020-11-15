@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Rooms from '../../components/Rooms/Rooms';
+import Rooms from '../Rooms/Rooms';
 
 import './Lane.scss';
 
