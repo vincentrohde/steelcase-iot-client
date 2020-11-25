@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - chairs
+      - state
+  chairs:
+    build: ./server/chairs
+    command: nodemon app.js
+    volumes:
+      - ./server/chairs:/app
+    ports:
+      - "5000:5000"
+    restart: always
+  state:
+    build: ./server/state
+    command: nodemon app.js
+    volumes:
+      - ./server/state:/app
+    ports:
+      - "8000:4000"
+    restart: always
+# volumes defined by user
+# volumes:
