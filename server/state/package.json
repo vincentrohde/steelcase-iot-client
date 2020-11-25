@@ -1,5 +1,5 @@
 {
-  "name": "iot_app_server",
+  "name": "state",
   "version": "1.0.0",
   "description": "Server for state saving",
   "main": "app.js",
@@ -19,7 +19,6 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "ws": "^6.1.3"
+    "express": "^4.16.4"
   }
 }
