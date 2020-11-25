@@ -1,5 +1,6 @@
 import React from 'react';
 import './Order.scss';
+require('dotenv').config()
 
 const Order = (props) => {
     const {name, positions} = props.information;
@@ -12,7 +13,6 @@ const Order = (props) => {
 
     feServer.onopen = function () {
         console.log("connected");
-
     }
 
     function sendMessage(name) {
