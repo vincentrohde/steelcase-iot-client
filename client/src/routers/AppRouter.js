@@ -22,6 +22,7 @@ class AppRouter extends Component {
     }
 
     initializeListener() {
+        // eslint-disable-next-line
         const subscriber = this.addStoreListener();
     }
 

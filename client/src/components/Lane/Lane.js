@@ -4,9 +4,7 @@ import Rooms from '../Rooms/Rooms';
 
 import './Lane.scss';
 
-const Lane = (props) => {
-    const { information } = props;
-
+const Lane = () => {
     return (
         <div className="Lane">
             <Rooms />
